@@ -6,7 +6,7 @@ set scrolloff=3
 set ruler
 
 " Enable mouse
-set mouse=a
+" set mouse=a
 
 " Intuitive backspacing in insert mode
 set backspace=indent,eol,start
@@ -34,3 +34,7 @@ set autoindent
 nnoremap <F2> :set invpaste ?<CR>
 set pastetoggle=<F2>
 set showmode
+
+" Set backup directory
+set swapfile
+set dir=~/backup/vim
