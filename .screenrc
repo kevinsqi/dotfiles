@@ -1,0 +1,3 @@
+# Window list at the bottom
+hardstatus alwayslastline
+hardstatus string "%-w%{= BW}%50>%n %t%{-}%+w%<"
