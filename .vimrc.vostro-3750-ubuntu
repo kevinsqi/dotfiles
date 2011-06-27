@@ -38,3 +38,6 @@ set showmode
 " Set backup directory
 " set swapfile
 " set dir=~/backup/vim
+
+" Increase tab maximum
+set tabpagemax=20

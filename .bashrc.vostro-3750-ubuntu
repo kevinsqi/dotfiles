@@ -106,8 +106,32 @@ fi
 #  CUSTOMIZATIONS  #
 ####################
 
+# git-grep clone
+function svngrep {
+  grep -Irs --exclude-dir=\.svn "${@}" | less -S 
+}
+
+# open grepped files
+function vimgrep {
+  vim -p $(svngrep -l "${@}")
+}
+
+# open svn modified files
+function svnmod {
+  vim -p $(svn status | grep '^M' | sed 's/^M      //')
+}
+
 # exports
 export EDITOR='vim'
 
 # aliases
 alias vim='vim -p'
+alias grep='grep --exclude-dir=\.svn'
+alias svndiff='svn diff --diff-cmd colordiff'
+
+# panjiva stuff
+source ~/.bashrc_panjiva
+
+# rvm (keep at bottom)
+[[ -s "/home/iqnivek/.rvm/scripts/rvm" ]] && source "/home/iqnivek/.rvm/scripts/rvm"  # This loads RVM into a shell session.
+
