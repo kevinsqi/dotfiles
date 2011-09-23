@@ -40,4 +40,4 @@ set showmode
 " set dir=~/backup/vim
 
 " Increase tab maximum
-set tabpagemax=20
+set tabpagemax=60
