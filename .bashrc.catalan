@@ -130,6 +130,8 @@ alias grep='grep --exclude-dir=\.svn'
 alias svndiff='svn diff --diff-cmd colordiff'
 alias less='less -S'
 alias Less='less'
+alias sg='svngrep'
+alias vg='vimgrep'
 
 # panjiva stuff
 source ~/.bashrc_panjiva
