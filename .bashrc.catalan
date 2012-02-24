@@ -121,17 +121,24 @@ function svnmod {
   vim -p $(svn status | grep '^M' | sed 's/^M      //')
 }
 
+# make diff awesome
+function svndiff {
+  svn diff --diff-cmd colordiff "${@}" | less -R
+}
+
 # exports
 export EDITOR='vim'
 
 # aliases
 alias vim='vim -p'
 alias grep='grep --exclude-dir=\.svn'
-alias svndiff='svn diff --diff-cmd colordiff'
 alias less='less -S'
 alias Less='less'
 alias sg='svngrep'
 alias vg='vimgrep'
+alias sd='svndiff'
+alias xorgswap='sudo mv /etc/X11/xorg.conf /etc/X11/xorg.conf.laptop'
+alias xorgreset='sudo cp /etc/X11/xorg.conf.laptop /etc/X11/xorg.conf'
 
 # panjiva stuff
 source ~/.bashrc_panjiva
