@@ -121,9 +121,19 @@ function svnmod {
   vim -p $(svn status | grep '^M' | sed 's/^M      //')
 }
 
+# add unversioned files
+function svnadd {
+  svn status | grep '^\?' | awk '{print $2}' | xargs svn add
+}
+
+# grep common rails directories from rails root
+function svngreprails {
+  svngrep "${@}" app config db lib public script spec
+}
+
 # make diff awesome
 function svndiff {
-  svn diff --diff-cmd colordiff "${@}" | less -R
+  svn diff --diff-cmd colordiff "${@}" | less -RS
 }
 
 # exports
@@ -135,8 +145,10 @@ alias grep='grep --exclude-dir=\.svn'
 alias less='less -S'
 alias Less='less'
 alias sg='svngrep'
-alias vg='vimgrep'
 alias sd='svndiff'
+alias vg='vimgrep'
+alias sts='svn status'
+alias sgr='svngreprails'
 alias xorgswap='sudo mv /etc/X11/xorg.conf /etc/X11/xorg.conf.laptop'
 alias xorgreset='sudo cp /etc/X11/xorg.conf.laptop /etc/X11/xorg.conf'
 
