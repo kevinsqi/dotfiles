@@ -113,7 +113,7 @@ function svngrep {
 
 # open grepped files
 function vimgrep {
-  vim -p $(svngrep -l "${@}")
+  vim -p $(svngrep -l --color=never "${@}")
 }
 
 # grep common rails directories from rails root
@@ -122,7 +122,7 @@ function svngreprails {
 }
 
 function vimgreprails {
-  vim -p $(svngreprails -l "${@}")
+  vim -p $(svngreprails -l --color=never "${@}")
 }
 
 # open svn modified files
