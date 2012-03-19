@@ -108,7 +108,7 @@ fi
 
 # git-grep clone
 function svngrep {
-  grep -Irs --exclude-dir=\.svn "${@}" | less -S 
+  grep -Irs --exclude-dir=\.svn --color=always "${@}" | less -RS
 }
 
 # open grepped files
@@ -144,8 +144,8 @@ function svndiff {
 export EDITOR='vim'
 
 # aliases
+alias grep='grep --exclude-dir=\.svn --color=auto'
 alias vim='vim -p'
-alias grep='grep --exclude-dir=\.svn'
 alias less='less -S'
 alias Less='less'
 alias sg='svngrep'
