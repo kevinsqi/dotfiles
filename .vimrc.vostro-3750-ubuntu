@@ -1,3 +1,6 @@
+" Pathogen
+call pathogen#infect()
+
 " set background=dark
 set ignorecase 
 set smartcase
