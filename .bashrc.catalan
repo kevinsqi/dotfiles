@@ -118,7 +118,12 @@ function vimgrep {
 
 # grep common rails directories from rails root
 function svngreprails {
-  svngrep "${@}" app config db lib public script spec
+  if [ -z "$2" ]
+  then
+    svngrep "${@}" app config db lib public script spec
+  else
+    svngrep "${@}"
+  fi
 }
 
 function vimgreprails {
@@ -148,10 +153,8 @@ alias grep='grep --exclude-dir=\.svn --color=auto'
 alias vim='vim -p'
 alias less='less -S'
 alias Less='less'
-alias sg='svngrep'
-alias vg='vimgrep'
-alias sr='svngreprails'
-alias vr='vimgreprails'
+alias sg='svngreprails'
+alias vg='vimgreprails'
 alias sd='svndiff'
 alias sts='svn status'
 alias xorgswap='sudo mv /etc/X11/xorg.conf /etc/X11/xorg.conf.laptop'
