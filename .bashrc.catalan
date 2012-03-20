@@ -117,6 +117,7 @@ function vimgrep {
 }
 
 # grep common rails directories from rails root
+# NOTE: does not currently work with options e.g. -i
 function svngreprails {
   if [ -z "$2" ]
   then
@@ -126,8 +127,14 @@ function svngreprails {
   fi
 }
 
+# NOTE: does not currently work with options e.g. -i
 function vimgreprails {
-  vim -p $(svngreprails -l --color=never "${@}")
+  if [ -z "$2" ]
+  then
+    vim -p $(svngrep -l --color=never "${@}" app config db lib public script spec)
+  else
+    vimgrep "${@}"
+  fi
 }
 
 # open svn modified files
