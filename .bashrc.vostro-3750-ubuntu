@@ -108,12 +108,33 @@ fi
 
 # git-grep clone
 function svngrep {
-  grep -Irs --exclude-dir=\.svn "${@}" | less -S 
+  grep -Irs --exclude-dir=\.svn --color=always "${@}" | less -RS
 }
 
 # open grepped files
 function vimgrep {
-  vim -p $(svngrep -l "${@}")
+  vim -p $(svngrep -l --color=never "${@}")
+}
+
+# grep common rails directories from rails root
+# NOTE: does not currently work with options e.g. -i
+function svngreprails {
+  if [ -z "$2" ]
+  then
+    svngrep "${@}" app config db lib public script spec
+  else
+    svngrep "${@}"
+  fi
+}
+
+# NOTE: does not currently work with options e.g. -i
+function vimgreprails {
+  if [ -z "$2" ]
+  then
+    vim -p $(svngrep -l --color=never "${@}" app config db lib public script spec)
+  else
+    vimgrep "${@}"
+  fi
 }
 
 # open svn modified files
@@ -121,17 +142,33 @@ function svnmod {
   vim -p $(svn status | grep '^M' | sed 's/^M      //')
 }
 
+# add unversioned files
+function svnadd {
+  svn status | grep '^\?' | awk '{print $2}' | xargs svn add
+}
+
+# make diff awesome
+function svndiff {
+  svn diff --diff-cmd colordiff "${@}" | less -RS
+}
+
 # exports
 export EDITOR='vim'
 
 # aliases
+alias grep='grep --exclude-dir=\.svn --color=auto'
 alias vim='vim -p'
-alias grep='grep --exclude-dir=\.svn'
-alias svndiff='svn diff --diff-cmd colordiff'
+alias less='less -S'
+alias Less='less'
+alias sg='svngreprails'
+alias vg='vimgreprails'
+alias sd='svndiff'
+alias sts='svn status'
+alias xorgswap='sudo mv /etc/X11/xorg.conf /etc/X11/xorg.conf.laptop'
+alias xorgreset='sudo cp /etc/X11/xorg.conf.laptop /etc/X11/xorg.conf'
 
 # panjiva stuff
 source ~/.bashrc_panjiva
 
 # rvm (keep at bottom)
-[[ -s "/home/iqnivek/.rvm/scripts/rvm" ]] && source "/home/iqnivek/.rvm/scripts/rvm"  # This loads RVM into a shell session.
-
+[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
