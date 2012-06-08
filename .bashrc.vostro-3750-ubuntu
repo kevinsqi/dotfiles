@@ -117,7 +117,8 @@ function vimgrep {
 }
 
 # grep common rails directories from rails root
-# NOTE: does not currently work with options e.g. -i
+# TODO: does not currently work with options e.g. -i
+# TODO: if not in a rails app directory, just grep on current working directory
 function svngreprails {
   if [ -z "$2" ]
   then
@@ -127,7 +128,7 @@ function svngreprails {
   fi
 }
 
-# NOTE: does not currently work with options e.g. -i
+# TODO: does not currently work with options e.g. -i
 function vimgreprails {
   if [ -z "$2" ]
   then

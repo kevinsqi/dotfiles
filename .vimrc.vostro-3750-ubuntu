@@ -1,6 +1,9 @@
 " Pathogen
 call pathogen#infect()
 
+" Match XML tags using % with matchit
+runtime macros/matchit.vim
+
 " set background=dark
 set ignorecase 
 set smartcase
