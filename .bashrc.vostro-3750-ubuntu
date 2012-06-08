@@ -113,12 +113,11 @@ function svngrep {
 
 # open grepped files
 function vimgrep {
-  vim -p $(svngrep -l --color=never "${@}")
+  vim -p $(svngrep -l --color=never "${@}") +/"${@}"
 }
 
 # grep common rails directories from rails root
-# TODO: does not currently work with options e.g. -i
-# TODO: if not in a rails app directory, just grep on current working directory
+# NOTE: does not currently work with options e.g. -i
 function svngreprails {
   if [ -z "$2" ]
   then
@@ -128,11 +127,11 @@ function svngreprails {
   fi
 }
 
-# TODO: does not currently work with options e.g. -i
+# NOTE: does not currently work with options e.g. -i
 function vimgreprails {
   if [ -z "$2" ]
   then
-    vim -p $(svngrep -l --color=never "${@}" app config db lib public script spec)
+    vim -p $(svngrep -l --color=never "${@}" app config db lib public script spec) +/"${@}"
   else
     vimgrep "${@}"
   fi
@@ -151,6 +150,14 @@ function svnadd {
 # make diff awesome
 function svndiff {
   svn diff --diff-cmd colordiff "${@}" | less -RS
+}
+
+# remove unversioned svn files
+function svncleancheck {
+  svn status --no-ignore | grep '^\?' | sed 's/^\?       //'
+}
+function svnclean {
+  svncleancheck | xargs -Ixx rm -rf xx
 }
 
 # exports
