@@ -121,17 +121,18 @@ function vimgrep {
 function svngreprails {
   if [ -z "$2" ]
   then
-    svngrep "${@}" app config db lib public script spec
+    svngrep --exclude-dir=public/images "${@}" app config db lib public script spec  # NOTE: add 'tools'?
   else
     svngrep "${@}"
   fi
 }
 
+# NOTE: bug where last argument is opened as a file even if it's a directory
 # NOTE: does not currently work with options e.g. -i
 function vimgreprails {
   if [ -z "$2" ]
   then
-    vim -p $(svngrep -l --color=never "${@}" app config db lib public script spec) +/"${@}"
+    vim -p $(svngrep -l --color=never --exclude-dir=public/images "${@}" app config db lib public script spec) +/"${@}"
   else
     vimgrep "${@}"
   fi
@@ -139,7 +140,7 @@ function vimgreprails {
 
 # open svn modified files
 function svnmod {
-  vim -p $(svn status | grep '^M' | sed 's/^M      //')
+  vim -p $(svn status | grep "^M\|^A" | sed 's/^.      //')
 }
 
 # add unversioned files
@@ -148,6 +149,7 @@ function svnadd {
 }
 
 # make diff awesome
+# sudo apt-get install colordiff
 function svndiff {
   svn diff --diff-cmd colordiff "${@}" | less -RS
 }
@@ -170,6 +172,7 @@ alias less='less -S'
 alias Less='less'
 alias sg='svngreprails'
 alias vg='vimgreprails'
+alias g='vimgreprails'
 alias sd='svndiff'
 alias sts='svn status'
 alias xorgswap='sudo mv /etc/X11/xorg.conf /etc/X11/xorg.conf.laptop'
@@ -180,3 +183,5 @@ source ~/.bashrc_panjiva
 
 # rvm (keep at bottom)
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
+
+PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
