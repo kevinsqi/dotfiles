@@ -47,3 +47,7 @@ set showmode
 
 " Increase tab maximum
 set tabpagemax=60
+
+" Tab completion
+set wildmode=longest,list,full
+set wildmenu
