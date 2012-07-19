@@ -143,6 +143,11 @@ function svnmod {
   vim -p $(svn status | grep "^M\|^A" | sed 's/^.      //')
 }
 
+# open git modified files
+function gitmod {
+  vim -p $(git status -s | grep "^ M\|^ A" | sed 's/^ . //')
+}
+
 # add unversioned files
 function svnadd {
   svn status | grep '^\?' | awk '{print $2}' | xargs svn add
