@@ -177,6 +177,7 @@ alias sd='svndiff'
 alias sts='svn status'
 alias xorgswap='sudo mv /etc/X11/xorg.conf /etc/X11/xorg.conf.laptop'
 alias xorgreset='sudo cp /etc/X11/xorg.conf.laptop /etc/X11/xorg.conf'
+alias lessf='less --follow-name -f'
 
 # panjiva stuff
 source ~/.bashrc_panjiva
