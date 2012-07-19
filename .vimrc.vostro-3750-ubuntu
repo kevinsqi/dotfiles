@@ -29,7 +29,7 @@ filetype indent on
 set hlsearch
 set incsearch
 
-" Python tabs
+" Ruby tabs
 set tabstop=2
 set shiftwidth=2
 set expandtab
@@ -45,9 +45,13 @@ set showmode
 " set swapfile
 " set dir=~/backup/vim
 
-" Increase tab maximum
+" Increase tab maximum. I'm a wild man.
 set tabpagemax=60
 
 " Tab completion
 set wildmode=longest,list,full
 set wildmenu
+
+" Line numbers (:set nonu[mber] to remove for terminal copy/paste)
+set number
+highlight LineNr ctermfg=grey ctermbg=darkgrey
