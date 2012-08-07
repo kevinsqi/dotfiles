@@ -106,6 +106,9 @@ fi
 #  CUSTOMIZATIONS  #
 ####################
 
+# NOTE: add 'tools'? vendor/plugins?
+RAILS_APP_SOURCE_DIRECTORIES='app config db lib public script spec'
+
 # git-grep clone
 function svngrep {
   grep -Irs --exclude-dir=\.svn --color=always "${@}" | less -RS
@@ -121,7 +124,7 @@ function vimgrep {
 function svngreprails {
   if [ -z "$2" ]
   then
-    svngrep --exclude-dir=public/images "${@}" app config db lib public script spec  # NOTE: add 'tools'?
+    svngrep --exclude-dir=public/images "${@}" $RAILS_APP_SOURCE_DIRECTORIES
   else
     svngrep "${@}"
   fi
@@ -132,7 +135,7 @@ function svngreprails {
 function vimgreprails {
   if [ -z "$2" ]
   then
-    vim -p $(svngrep -l --color=never --exclude-dir=public/images "${@}" app config db lib public script spec) +/"${@}"
+    vim -p $(svngrep -l --color=never --exclude-dir=public/images "${@}" $RAILS_APP_SOURCE_DIRECTORIES) +/"${@}"
   else
     vimgrep "${@}"
   fi
