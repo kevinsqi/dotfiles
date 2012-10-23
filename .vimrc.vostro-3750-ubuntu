@@ -41,6 +41,9 @@ nnoremap <F2> :set invpaste ?<CR>
 set pastetoggle=<F2>
 set showmode
 
+" Make 'ga' split the current tab and then navigate to tab under the cursor (depends on vim-rails 'gf' command)
+map ga :tab split<Enter>gf
+
 " Set backup directory
 " set swapfile
 " set dir=~/backup/vim

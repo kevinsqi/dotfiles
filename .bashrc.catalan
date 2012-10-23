@@ -171,6 +171,11 @@ function svndiff {
   svn diff --diff-cmd colordiff "${@}" | less -RS
 }
 
+# always pipe output to less
+function gitdiff {
+  git diff --color "${@}" | less -RS
+}
+
 # remove unversioned svn files
 function svncleancheck {
   svn status --no-ignore | grep '^\?' | sed 's/^\?       //'
@@ -195,7 +200,7 @@ alias Less='less'
 alias sg='git grep'
 alias vg='gitgrepvim'
 alias g='gitgrepvim'
-alias sd='git diff'
+alias sd='gitdiff'
 alias sts='git status'
 
 alias xorgswap='sudo mv /etc/X11/xorg.conf /etc/X11/xorg.conf.laptop'
