@@ -52,8 +52,9 @@ map ga :tab split<Enter>gf
 set tabpagemax=60
 
 " Tab completion
-set wildmode=longest,list,full
-set wildmenu
+set wildmode=longest,list
+" set wildmode=longest,list,full
+" set wildmenu
 
 " Line numbers (:set nonu[mber] to remove for terminal copy/paste)
 set number

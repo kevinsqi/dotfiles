@@ -201,6 +201,7 @@ alias sg='git grep'
 alias vg='gitgrepvim'
 alias g='gitgrepvim'
 alias sd='gitdiff'
+alias sdc="gitdiff --cached"
 alias sts='git status'
 
 alias xorgswap='sudo mv /etc/X11/xorg.conf /etc/X11/xorg.conf.laptop'
