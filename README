@@ -1,2 +1,7 @@
 Installation:
-Use symlinks.
+Symlink .bashrc
+Symlink .bashrc_panjiva
+Symlink .vimrc
+
+Install pathogen: https://github.com/tpope/vim-pathogen
+Install syntastic, jshint, etc.
