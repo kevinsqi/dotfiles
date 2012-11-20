@@ -204,6 +204,7 @@ alias sd='gitdiff'
 alias sdc="gitdiff --cached"
 alias sts='git status'
 alias gl='git log --name-status'
+alias diff='git diff --color --no-index'
 
 alias xorgswap='sudo mv /etc/X11/xorg.conf /etc/X11/xorg.conf.laptop'
 alias xorgreset='sudo cp /etc/X11/xorg.conf.laptop /etc/X11/xorg.conf'
