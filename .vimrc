@@ -1,4 +1,10 @@
-set background=dark
+" Pathogen
+call pathogen#infect()
+
+" Match XML tags using % with matchit
+runtime macros/matchit.vim
+
+" set background=dark
 set ignorecase 
 set smartcase
 set title
@@ -23,7 +29,7 @@ filetype indent on
 set hlsearch
 set incsearch
 
-" Python tabs
+" Ruby tabs
 set tabstop=2
 set shiftwidth=2
 set expandtab
@@ -35,6 +41,21 @@ nnoremap <F2> :set invpaste ?<CR>
 set pastetoggle=<F2>
 set showmode
 
+" Make 'ga' split the current tab and then navigate to tab under the cursor (depends on vim-rails 'gf' command)
+map ga :tab split<Enter>gf
+
 " Set backup directory
-set swapfile
-set dir=~/backup/vim
+" set swapfile
+" set dir=~/backup/vim
+
+" Increase tab maximum. I'm a wild man.
+set tabpagemax=60
+
+" Tab completion
+set wildmode=longest,list
+" set wildmode=longest,list,full
+" set wildmenu
+
+" Line numbers (:set nonu[mber] to remove for terminal copy/paste)
+set number
+highlight LineNr ctermfg=grey ctermbg=darkgrey
