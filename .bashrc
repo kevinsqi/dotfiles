@@ -207,7 +207,8 @@ alias g='gitgrepvim'
 alias sd='gitdiff'
 alias sdc="gitdiff --cached"
 alias sts='git status'
-alias gl='git log --name-status'
+alias gl='git log --name-status'  # git log with files changed
+alias bl='git log -p origin/master..HEAD'  # show commits that aren't in master
 alias diff='git diff --color --no-index'
 
 alias xorgswap='sudo mv /etc/X11/xorg.conf /etc/X11/xorg.conf.laptop'
