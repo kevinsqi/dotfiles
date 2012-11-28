@@ -180,6 +180,12 @@ function gitdiff {
   git diff --color "${@}" | less -RS
 }
 
+# push current branch
+function gitpush {
+  echo "Pushing to $(git rev-parse --abbrev-ref HEAD)..."
+  git push origin $(git rev-parse --abbrev-ref HEAD)
+}
+
 # remove unversioned svn files
 function svncleancheck {
   svn status --no-ignore | grep '^\?' | sed 's/^\?       //'
@@ -196,6 +202,7 @@ alias grep='grep --exclude-dir=\.svn --color=auto'
 alias vim='vim -p'
 alias less='less -S'
 alias Less='less'
+alias diff='git diff --color --no-index'
 #alias sg='svngreprails'
 #alias vg='vimgreprails'
 #alias g='vimgreprails'
@@ -207,9 +214,10 @@ alias g='gitgrepvim'
 alias sd='gitdiff'
 alias sdc="gitdiff --cached"
 alias sts='git status'
+
 alias gl='git log --name-status'  # git log with files changed
 alias bl='git log -p origin/master..HEAD'  # show commits that aren't in master
-alias diff='git diff --color --no-index'
+alias gp='gitpush'
 
 alias xorgswap='sudo mv /etc/X11/xorg.conf /etc/X11/xorg.conf.laptop'
 alias xorgreset='sudo cp /etc/X11/xorg.conf.laptop /etc/X11/xorg.conf'
