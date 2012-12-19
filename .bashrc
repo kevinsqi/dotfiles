@@ -145,6 +145,7 @@ function vimgreprails {
   fi
 }
 
+# open files that match git grep, AND SET THE SEARCH QUERY
 function gitgrepvim {
   vim -p $(git grep -l "${@}") +/"${@}"
 }
@@ -166,7 +167,7 @@ function svnadd {
 
 # open git modified files
 function gitmod {
-  vim -p $(git status -s | grep "^ M\|^ A" | sed 's/^ . //')
+  vim -p $(git status -s | grep "^ \?M\|^ \?A" | sed 's/^ \?. //')
 }
 
 # make diff awesome
@@ -184,6 +185,12 @@ function gitdiff {
 function gitpush {
   echo "Pushing to $(git rev-parse --abbrev-ref HEAD)..."
   git push origin $(git rev-parse --abbrev-ref HEAD)
+}
+
+# checkout remote branch
+function gitbranch {
+  echo "Executing: git checkout -b ${@} origin/${@}..."
+  git checkout -b ${@} origin/${@}
 }
 
 # remove unversioned svn files
