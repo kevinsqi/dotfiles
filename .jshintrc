@@ -28,7 +28,8 @@
 
 
     // EcmaScript 5.
-    "es5"           : true,   // Allow EcmaScript 5 syntax.
+    // disable es5 because it allows trailing commas
+    "es5"           : false,  // Allow EcmaScript 5 syntax.
     "strict"        : false,  // Require `use strict` pragma in every file.
     "globalstrict"  : false,  // Allow global "use strict" (also enables 'strict').
 

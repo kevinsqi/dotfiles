@@ -1,6 +1,9 @@
+TODO:
+Make .bashrc require a file in ~/dotfiles instead of replacing .bashrc
+
 Installation:
 Symlink .bashrc
-Symlink .bashrc_panjiva
+Symlink .bashrc_panjiva to Panjiva repo
 Symlink .vimrc
 
 Install pathogen: https://github.com/tpope/vim-pathogen
