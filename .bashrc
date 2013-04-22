@@ -201,6 +201,10 @@ function svnclean {
   svncleancheck | xargs -Ixx rm -rf xx
 }
 
+__git_files () {
+  _wanted files expl 'local files' _files
+}
+
 # exports
 export EDITOR='vim'
 
@@ -220,6 +224,7 @@ alias vg='gitgrepvim'
 alias g='gitgrepvim'
 alias sd='gitdiff'
 alias sdc="gitdiff --cached"
+alias sdw="gitdiff --color-words"
 alias sts='git status'
 
 alias gl='git log --name-status'  # git log with files changed
