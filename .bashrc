@@ -228,7 +228,7 @@ alias sdw="gitdiff --color-words"
 alias sts='git status'
 
 alias gl='git log --name-status'  # git log with files changed
-alias bl='git log -p origin/master..HEAD'  # show commits that aren't in master
+alias bl='git log origin/master..HEAD'  # show commits that aren't in master
 alias gp='gitpush'
 alias gss='git stash show -p'  # show stash diff
 
