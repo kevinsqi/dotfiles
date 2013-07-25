@@ -178,7 +178,7 @@ function svndiff {
 
 # always pipe output to less
 function gitdiff {
-  git diff --color "${@}" | less -RS
+  git diff -b --color "${@}" | less -RS
 }
 
 # push current branch
@@ -199,6 +199,11 @@ function svncleancheck {
 }
 function svnclean {
   svncleancheck | xargs -Ixx rm -rf xx
+}
+
+# search git history
+function gitsearch {
+  git grep ${@} $(git rev-list --all)
 }
 
 __git_files () {
