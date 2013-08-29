@@ -4,6 +4,12 @@ call pathogen#infect()
 " ctrlp
 set runtimepath^=~/.vim/bundle/ctrlp.vim
 
+" ctrlp - open tabs by default
+let g:ctrlp_prompt_mappings = {
+    \ 'AcceptSelection("e")': ['<c-t>'],
+    \ 'AcceptSelection("t")': ['<cr>', '<2-LeftMouse>'],
+    \ }
+
 " Match XML tags using % with matchit
 runtime macros/matchit.vim
 
