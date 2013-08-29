@@ -1,6 +1,9 @@
 " Pathogen
 call pathogen#infect()
 
+" ctrlp
+set runtimepath^=~/.vim/bundle/ctrlp.vim
+
 " Match XML tags using % with matchit
 runtime macros/matchit.vim
 
