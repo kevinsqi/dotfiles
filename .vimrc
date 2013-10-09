@@ -1,6 +1,3 @@
-" Pathogen
-" call pathogen#infect()
-
 " Vundle
 set rtp+=~/.vim/bundle/vundle
 call vundle#rc()
@@ -9,9 +6,6 @@ Bundle 'gmarik/vundle'
 Bundle 'tpope/vim-rails.git'
 Bundle 'scrooloose/syntastic'
 Bundle 'kien/ctrlp.vim'
-
-" ctrlp
-set runtimepath^=~/.vim/bundle/ctrlp.vim
 
 " ctrlp - open tabs by default
 let g:ctrlp_prompt_mappings = {
