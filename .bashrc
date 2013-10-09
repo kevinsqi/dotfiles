@@ -243,7 +243,10 @@ alias lessf='less --follow-name -f'
 alias top='htop'
 
 # panjiva stuff
-source ~/.bashrc_panjiva
+if [ -f ~/.bashrc_panjiva ]
+then
+  source ~/.bashrc_panjiva
+fi
 
 # rvm (keep at bottom)
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*

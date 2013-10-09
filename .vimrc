@@ -1,5 +1,14 @@
 " Pathogen
-call pathogen#infect()
+" call pathogen#infect()
+
+" Vundle
+set rtp+=~/.vim/bundle/vundle
+call vundle#rc()
+" Vundle bundles
+Bundle 'gmarik/vundle'
+Bundle 'tpope/vim-rails.git'
+Bundle 'scrooloose/syntastic'
+Bundle 'kien/ctrlp.vim'
 
 " ctrlp
 set runtimepath^=~/.vim/bundle/ctrlp.vim
