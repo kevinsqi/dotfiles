@@ -178,7 +178,7 @@ function svndiff {
 
 # always pipe output to less
 function gitdiff {
-  git diff -b --color "${@}" | less -RS
+  git diff --color "${@}" | less -RS
 }
 
 # push current branch
@@ -212,6 +212,8 @@ __git_files () {
 
 # exports
 export EDITOR='vim'
+
+export PATH=${PATH}:~/android-sdks/platform-tools:~/android-sdks/tools  # android development
 
 # aliases
 alias grep='grep --exclude-dir=\.svn --color=auto'
