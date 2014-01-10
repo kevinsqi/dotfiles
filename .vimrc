@@ -7,6 +7,9 @@ Bundle 'tpope/vim-rails.git'
 Bundle 'scrooloose/syntastic'
 Bundle 'kien/ctrlp.vim'
 
+" syntastic is dog slow
+let g:syntastic_check_on_open=0
+
 " ctrlp - open tabs by default
 let g:ctrlp_prompt_mappings = {
     \ 'AcceptSelection("e")': ['<c-t>'],

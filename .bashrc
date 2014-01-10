@@ -213,6 +213,8 @@ __git_files () {
 # exports
 export EDITOR='vim'
 
+export PAGER='less -S -R'
+
 export PATH=${PATH}:~/android-sdks/platform-tools:~/android-sdks/tools  # android development
 
 # aliases
