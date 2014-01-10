@@ -187,6 +187,12 @@ function gitpush {
   git push origin $(git rev-parse --abbrev-ref HEAD)
 }
 
+# pull current branch
+function gitpull {
+  echo "Pulling from $(git rev-parse --abbrev-ref HEAD)..."
+  git pull origin $(git rev-parse --abbrev-ref HEAD)
+}
+
 # checkout remote branch
 function gitbranch {
   echo "Executing: git checkout -b ${@} origin/${@}..."
@@ -239,6 +245,7 @@ alias sts='git status'
 alias gl='git log --name-status'  # git log with files changed
 alias bl='git log origin/master..HEAD'  # show commits that aren't in master
 alias gp='gitpush'
+alias gpuf='gitpull && git fetch'  # git pull and fetch
 alias gss='git stash show -p'  # show stash diff
 
 alias xorgswap='sudo mv /etc/X11/xorg.conf /etc/X11/xorg.conf.laptop'
