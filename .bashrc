@@ -211,6 +211,10 @@ function svnclean {
 function gitsearch {
   git grep ${@} $(git rev-list --all)
 }
+function gitsearchlog {
+  # http://stackoverflow.com/questions/4468361/search-all-of-git-history-for-string
+  git log --all -S${@}
+}
 
 __git_files () {
   _wanted files expl 'local files' _files
