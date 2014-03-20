@@ -4,6 +4,7 @@ call vundle#rc()
 " Vundle bundles
 Bundle 'gmarik/vundle'
 Bundle 'tpope/vim-rails.git'
+Bundle 'tpope/vim-fugitive'
 Bundle 'scrooloose/syntastic'
 Bundle 'kien/ctrlp.vim'
 
