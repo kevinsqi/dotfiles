@@ -257,6 +257,8 @@ alias xorgreset='sudo cp /etc/X11/xorg.conf.laptop /etc/X11/xorg.conf'
 alias lessf='less --follow-name -f'
 alias top='htop'
 
+alias op='xdg-open'
+
 # panjiva stuff
 if [ -f ~/.bashrc_panjiva ]
 then
