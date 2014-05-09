@@ -259,6 +259,9 @@ alias top='htop'
 
 alias op='xdg-open'
 
+# Usage: `echo <filename> | xclip`
+alias xclip='xclip -selection c'
+
 # panjiva stuff
 if [ -f ~/.bashrc_panjiva ]
 then
