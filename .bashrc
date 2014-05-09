@@ -259,7 +259,7 @@ alias top='htop'
 
 alias op='xdg-open'
 
-# Usage: `echo <filename> | xclip`
+# Usage: `cat <filename> | xclip`
 alias xclip='xclip -selection c'
 
 # panjiva stuff
