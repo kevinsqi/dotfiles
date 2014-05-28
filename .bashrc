@@ -220,6 +220,12 @@ __git_files () {
   _wanted files expl 'local files' _files
 }
 
+# Copy file to clipboard
+# Usage: clip <filename>
+function clip {
+  cat ${@} | xclip -selection c
+}
+
 # exports
 export EDITOR='vim'
 
@@ -258,6 +264,8 @@ alias lessf='less --follow-name -f'
 alias top='htop'
 
 alias op='xdg-open'
+
+alias jk='jekyll serve --watch'
 
 # Usage: `cat <filename> | xclip`
 alias xclip='xclip -selection c'
