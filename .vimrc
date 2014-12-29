@@ -1,12 +1,18 @@
 " Vundle
-set rtp+=~/.vim/bundle/vundle
-call vundle#rc()
-" Vundle bundles
-Bundle 'gmarik/vundle'
-Bundle 'tpope/vim-rails.git'
-Bundle 'tpope/vim-fugitive'
-Bundle 'scrooloose/syntastic'
-Bundle 'kien/ctrlp.vim'
+set nocompatible
+filetype off
+
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
+
+Plugin 'gmarik/Vundle.vim'
+Plugin 'tpope/vim-rails.git'
+Plugin 'tpope/vim-fugitive'
+Plugin 'scrooloose/syntastic'
+Plugin 'kien/ctrlp.vim'
+
+call vundle#end()
+filetype plugin indent on
 
 " syntastic is dog slow
 let g:syntastic_check_on_open=0
