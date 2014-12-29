@@ -270,17 +270,18 @@ alias jk='jekyll serve --watch'
 # Usage: `cat <filename> | xclip`
 alias xclip='xclip -selection c'
 
-# panjiva stuff
-if [ -f ~/.bashrc_panjiva ]
-then
-  source ~/.bashrc_panjiva
-fi
-
 # nvm (nodejs version manager)
 export NVM_DIR=~/.nvm
 source ~/.nvm/nvm.sh
 
-# rvm (keep at bottom)
-[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
+# PatientsLikeMe
+if [ -f ~/.bashrc_patientslikeme ]
+then
+  source ~/.bashrc_patientslikeme
+fi
 
-PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
+# RVM
+if [ -f ~/.bashrc_rvm ]
+then
+  source ~/.bashrc_rvm
+fi

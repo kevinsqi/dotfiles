@@ -1,0 +1,4 @@
+# rvm (keep at bottom)
+[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell sessio
+
+PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
