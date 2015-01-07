@@ -271,8 +271,10 @@ alias jk='jekyll serve --watch'
 alias xclip='xclip -selection c'
 
 # nvm (nodejs version manager)
-export NVM_DIR=~/.nvm
-source ~/.nvm/nvm.sh
+if [ -d ~/.nvm ]; then
+  export NVM_DIR=~/.nvm
+  source ~/.nvm/nvm.sh
+fi
 
 # PatientsLikeMe
 if [ -f ~/.bashrc_patientslikeme ]
@@ -280,7 +282,7 @@ then
   source ~/.bashrc_patientslikeme
 fi
 
-# RVM
+# RVM (keep at bottom)
 if [ -f ~/.bashrc_rvm ]
 then
   source ~/.bashrc_rvm
