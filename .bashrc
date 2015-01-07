@@ -226,6 +226,11 @@ function clip {
   cat ${@} | xclip -selection c
 }
 
+# Run one test file
+function raketestone {
+  rake test TEST=#{@}
+}
+
 # exports
 export EDITOR='vim'
 
@@ -233,42 +238,44 @@ export PAGER='less -S -R'
 
 export PATH=${PATH}:~/android-sdks/platform-tools:~/android-sdks/tools  # android development
 
-# aliases
+################
+#   Aliases    #
+################
+
+# general unix
 alias grep='grep --exclude-dir=\.svn --color=auto'
 alias vim='vim -p'
 alias less='less -S'
 alias Less='less'
 alias diff='git diff --color --no-index'
-#alias sg='svngreprails'
-#alias vg='vimgreprails'
-#alias g='vimgreprails'
-#alias sd='svndiff'
-#alias sts='svn status'
+alias lessf='less --follow-name -f'
+alias top='htop'
+alias op='xdg-open'
+alias xclip='xclip -selection c'  # Usage: `cat <filename> | xclip`
+
+# git
 alias sg='git grep'  # TODO: make this also match on filenames?
 alias vg='gitgrepvim'
-alias g='gitgrepvim'
 alias sd='gitdiff'
 alias sdc="gitdiff --cached"
 alias sdw="gitdiff --color-words"
 alias sts='git status'
-
 alias gl='git log --name-status'  # git log with files changed
 alias bl='git log origin/master..HEAD'  # show commits that aren't in master
 alias gp='gitpush'
 alias gpuf='gitpull && git fetch'  # git pull and fetch
 alias gss='git stash show -p'  # show stash diff
 
-alias xorgswap='sudo mv /etc/X11/xorg.conf /etc/X11/xorg.conf.laptop'
-alias xorgreset='sudo cp /etc/X11/xorg.conf.laptop /etc/X11/xorg.conf'
-alias lessf='less --follow-name -f'
-alias top='htop'
-
-alias op='xdg-open'
-
+# misc
 alias jk='jekyll serve --watch'
 
-# Usage: `cat <filename> | xclip`
-alias xclip='xclip -selection c'
+# rails
+alias rt='raketestone'
+
+
+########################
+# Sourcing other files #
+########################
 
 # nvm (nodejs version manager)
 if [ -d ~/.nvm ]; then
