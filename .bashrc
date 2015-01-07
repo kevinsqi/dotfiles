@@ -228,7 +228,7 @@ function clip {
 
 # Run one test file
 function raketestone {
-  rake test TEST=#{@}
+  rake test TEST=${@}
 }
 
 # exports
