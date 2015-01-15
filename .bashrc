@@ -110,70 +110,14 @@ fi
 #  CUSTOMIZATIONS  #
 ####################
 
-# NOTE: add 'tools'? vendor/plugins?
-RAILS_APP_SOURCE_DIRECTORIES='app config db lib public script spec'
-
-# git-grep clone
-function svngrep {
-  grep -Irs --exclude-dir=\.svn --color=always "${@}" | less -RS
-}
-
-# open grepped files
-function vimgrep {
-  vim -p $(svngrep -l --color=never "${@}") +/"${@}"
-}
-
-# grep common rails directories from rails root
-# NOTE: does not currently work with options e.g. -i
-function svngreprails {
-  if [ -z "$2" ]
-  then
-    svngrep --exclude-dir=public/images "${@}" $RAILS_APP_SOURCE_DIRECTORIES
-  else
-    svngrep "${@}"
-  fi
-}
-
-# NOTE: bug where last argument is opened as a file even if it's a directory
-# NOTE: does not currently work with options e.g. -i
-function vimgreprails {
-  if [ -z "$2" ]
-  then
-    vim -p $(svngrep -l --color=never --exclude-dir=public/images "${@}" $RAILS_APP_SOURCE_DIRECTORIES) +/"${@}"
-  else
-    vimgrep "${@}"
-  fi
-}
-
 # open files that match git grep, AND SET THE SEARCH QUERY
 function gitgrepvim {
   vim -p $(git grep -l "${@}") +/"${@}"
 }
 
-# open svn modified files
-function svnmod {
-  vim -p $(svn status | grep "^M\|^A" | sed 's/^.      //')
-}
-
-# open svn unversioned files
-function svnver {
-  vim -p $(svn status | grep "^\?" | sed 's/^.      //')
-}
-
-# add unversioned files
-function svnadd {
-  svn status | grep '^\?' | awk '{print $2}' | xargs svn add
-}
-
 # open git modified files
 function gitmod {
   vim -p $(git status -s | grep "^ \?M\|^ \?A" | sed 's/^ \?. //')
-}
-
-# make diff awesome
-# sudo apt-get install colordiff
-function svndiff {
-  svn diff --diff-cmd colordiff "${@}" | less -RS
 }
 
 # always pipe output to less
@@ -197,14 +141,6 @@ function gitpull {
 function gitbranch {
   echo "Executing: git checkout -b ${@} origin/${@}..."
   git checkout -b ${@} origin/${@}
-}
-
-# remove unversioned svn files
-function svncleancheck {
-  svn status --no-ignore | grep '^\?' | sed 's/^\?       //'
-}
-function svnclean {
-  svncleancheck | xargs -Ixx rm -rf xx
 }
 
 # search git history
@@ -233,9 +169,7 @@ function raketestone {
 
 # exports
 export EDITOR='vim'
-
 export PAGER='less -S -R'
-
 export PATH=${PATH}:~/android-sdks/platform-tools:~/android-sdks/tools  # android development
 
 ################
@@ -243,7 +177,6 @@ export PATH=${PATH}:~/android-sdks/platform-tools:~/android-sdks/tools  # androi
 ################
 
 # general unix
-alias grep='grep --exclude-dir=\.svn --color=auto'
 alias vim='vim -p'
 alias less='less -S'
 alias Less='less'

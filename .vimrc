@@ -1,3 +1,5 @@
+" Install vundle: https://github.com/gmarik/Vundle.vim#quick-start
+
 " Vundle
 set nocompatible
 filetype off

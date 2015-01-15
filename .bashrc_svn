@@ -1,0 +1,67 @@
+alias grep='grep --exclude-dir=\.svn --color=auto'
+
+# NOTE: add 'tools'? vendor/plugins?
+RAILS_APP_SOURCE_DIRECTORIES='app config db lib public script spec'
+
+# git-grep clone
+function svngrep {
+  grep -Irs --exclude-dir=\.svn --color=always "${@}" | less -RS
+}
+
+# open grepped files
+function vimgrep {
+  vim -p $(svngrep -l --color=never "${@}") +/"${@}"
+}
+
+# grep common rails directories from rails root
+# NOTE: does not currently work with options e.g. -i
+function svngreprails {
+  if [ -z "$2" ]
+  then
+    svngrep --exclude-dir=public/images "${@}" $RAILS_APP_SOURCE_DIRECTORIES
+  else
+    svngrep "${@}"
+  fi
+}
+
+# NOTE: bug where last argument is opened as a file even if it's a directory
+# NOTE: does not currently work with options e.g. -i
+function vimgreprails {
+  if [ -z "$2" ]
+  then
+    vim -p $(svngrep -l --color=never --exclude-dir=public/images "${@}" $RAILS_APP_SOURCE_DIRECTORIES) +/"${@}"
+  else
+    vimgrep "${@}"
+  fi
+}
+
+# open svn modified files
+function svnmod {
+  vim -p $(svn status | grep "^M\|^A" | sed 's/^.      //')
+}
+
+# open svn unversioned files
+function svnver {
+  vim -p $(svn status | grep "^\?" | sed 's/^.      //')
+}
+
+# add unversioned files
+function svnadd {
+  svn status | grep '^\?' | awk '{print $2}' | xargs svn add
+}
+
+# make diff awesome
+# sudo apt-get install colordiff
+function svndiff {
+  svn diff --diff-cmd colordiff "${@}" | less -RS
+}
+
+# remove unversioned svn files
+function svncleancheck {
+  svn status --no-ignore | grep '^\?' | sed 's/^\?       //'
+}
+function svnclean {
+  svncleancheck | xargs -Ixx rm -rf xx
+}
+
+
