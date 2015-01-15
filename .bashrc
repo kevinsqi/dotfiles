@@ -167,6 +167,11 @@ function raketestone {
   rake test TEST=${@}
 }
 
+# Run one method from one test file
+function raketestonemethod {
+  ruby -I"lib:test" $1 -n $2
+}
+
 # exports
 export EDITOR='vim'
 export PAGER='less -S -R'
@@ -204,6 +209,7 @@ alias jk='jekyll serve --watch'
 
 # rails
 alias rt='raketestone'
+alias rtm='raketestonemethod'
 
 
 ########################
