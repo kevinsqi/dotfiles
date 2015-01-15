@@ -73,7 +73,7 @@ map ga :tab split<Enter>gf
 " set dir=~/backup/vim
 
 " Increase tab maximum. I'm a wild man.
-set tabpagemax=60
+set tabpagemax=100
 
 " Tab completion
 set wildmode=longest,list
