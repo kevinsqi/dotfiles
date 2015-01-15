@@ -1,0 +1,15 @@
+[user]
+    name = Kevin Qi
+    email = iqnivek@gmail.com
+[core]
+    editor = vim
+[color]
+    status = auto
+    diff = auto
+    branch = auto
+[alias]
+    co = checkout
+    st = status
+    ci = commit
+[push]
+    default = tracking
