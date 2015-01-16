@@ -190,6 +190,7 @@ alias lessf='less --follow-name -f'
 alias top='htop'
 alias op='xdg-open'
 alias xclip='xclip -selection c'  # Usage: `cat <filename> | xclip`
+alias fd='find . -name'
 
 # git
 alias sg='git grep'  # TODO: make this also match on filenames?
