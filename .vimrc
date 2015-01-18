@@ -13,6 +13,7 @@ Plugin 'tpope/vim-fugitive'
 Plugin 'scrooloose/syntastic'
 Plugin 'kien/ctrlp.vim'
 Plugin 'kchmck/vim-coffee-script'
+Plugin 'pbrisbin/vim-mkdir'
 
 call vundle#end()
 filetype plugin indent on
