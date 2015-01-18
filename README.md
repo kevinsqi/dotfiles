@@ -1,3 +1,8 @@
+## TODO
+
+* Use thoughtbot's dotfile install approach? rcm + .dotfile.local overrides: https://github.com/thoughtbot/dotfiles
+* Take ideas from thoughtbot's vimrc, etc
+
 ## Installation
 
 * Symlink .bashrc
@@ -7,6 +12,3 @@
 * Symlink .jshintrc (optional)
 * Install vundle: https://github.com/gmarik/Vundle.vim
 
-## TODO
-
-* See how thoughtbot dotfiles does setup, create script to automatically do symlinking

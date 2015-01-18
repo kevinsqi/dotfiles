@@ -8,12 +8,19 @@ set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 
 Plugin 'gmarik/Vundle.vim'
-Plugin 'tpope/vim-rails.git'
-Plugin 'tpope/vim-fugitive'
-Plugin 'scrooloose/syntastic'
+
+Plugin 'tpope/vim-rails'
+Plugin 'tpope/vim-endwise'         " add end tags in ruby
 Plugin 'kien/ctrlp.vim'
-Plugin 'kchmck/vim-coffee-script'
+Plugin 'vim-scripts/matchit.zip'   " match xml tags with %
 Plugin 'pbrisbin/vim-mkdir'
+Plugin 'skalnik/vim-vroom'         " run ruby tests
+
+Plugin 'scrooloose/syntastic'
+Plugin 'slim-template/vim-slim'    " haml syntax highlighting?
+Plugin 'kchmck/vim-coffee-script'
+
+" Plugin 'tpope/vim-fugitive'
 
 call vundle#end()
 filetype plugin indent on
@@ -26,9 +33,6 @@ let g:ctrlp_prompt_mappings = {
     \ 'AcceptSelection("e")': ['<c-t>'],
     \ 'AcceptSelection("t")': ['<cr>', '<2-LeftMouse>'],
     \ }
-
-" Match XML tags using % with matchit
-runtime macros/matchit.vim
 
 " set background=dark
 set ignorecase 
