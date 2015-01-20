@@ -16,3 +16,4 @@
     Host *
         ServerAliveInterval 300
     ```
+* Set custom PGUSER and ~/.pgpass and `chmod 600 ~/.pgpass`
