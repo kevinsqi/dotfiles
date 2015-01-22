@@ -11,5 +11,6 @@
     co = checkout
     st = status
     ci = commit
+    undo-commit = reset --soft HEAD^ 
 [push]
     default = tracking
