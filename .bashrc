@@ -217,6 +217,12 @@ alias rtm='raketestonemethod'
 # Sourcing other files #
 ########################
 
+# .bashrc.local
+if [ -f ~/.bashrc.local ]
+then
+  source ~/.bashrc.local
+fi
+
 # nvm (nodejs version manager)
 if [ -d ~/.nvm ]; then
   export NVM_DIR=~/.nvm

@@ -10,7 +10,7 @@ call vundle#begin()
 Plugin 'gmarik/Vundle.vim'
 
 Plugin 'tpope/vim-rails'
-Plugin 'tpope/vim-endwise'         " add end tags in ruby
+Plugin 'tpope/vim-fugitive'        " Gblame
 Plugin 'kien/ctrlp.vim'
 Plugin 'vim-scripts/matchit.zip'   " match xml tags with %
 Plugin 'pbrisbin/vim-mkdir'
@@ -20,7 +20,7 @@ Plugin 'scrooloose/syntastic'
 Plugin 'slim-template/vim-slim'    " haml syntax highlighting?
 Plugin 'kchmck/vim-coffee-script'
 
-" Plugin 'tpope/vim-fugitive'
+" Plugin 'tpope/vim-endwise'       " add end tags in ruby
 
 call vundle#end()
 filetype plugin indent on

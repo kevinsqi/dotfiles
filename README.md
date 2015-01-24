@@ -16,4 +16,5 @@
     Host *
         ServerAliveInterval 300
     ```
-* Set custom PGUSER and ~/.pgpass and `chmod 600 ~/.pgpass`
+* Copy .bashrc.local.template to .bashrc.local
+* Create ~/.pgpass and `chmod 600 ~/.pgpass`
