@@ -8,13 +8,11 @@
 * Symlink .bashrc
 * Symlink .bashrc\_rvm (if using rvm)
 * Symlink .vimrc
-* Symlink .gitconfig (or copy and edit)
 * Symlink .jshintrc (optional)
+
 * Install vundle: https://github.com/gmarik/Vundle.vim
-* Configure .ssh/config to prevent ssh broken pipe errors:
-    ```
-    Host *
-        ServerAliveInterval 300
-    ```
-* Copy .bashrc.local.template to .bashrc.local
+
+* Copy .gitconfig.template to ~/.gitconfig
+* Copy .ssh.config.template to ~/.ssh/config
+* Copy .bashrc.local.template to ~/.bashrc.local
 * Create ~/.pgpass and `chmod 600 ~/.pgpass`

@@ -1,0 +1,7 @@
+# Host <alias, e.g. "linode">
+#     HostName <ip_address, e.g. "0.0.0.0">
+#     User <username>
+
+# Prevent broken pipe errors
+Host *
+    ServerAliveInterval 300
