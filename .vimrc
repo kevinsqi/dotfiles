@@ -25,10 +25,9 @@ Plugin 'kchmck/vim-coffee-script'
 call vundle#end()
 filetype plugin indent on
 
-" syntastic is dog slow
-let g:syntastic_check_on_open=0
+let g:syntastic_coffee_checkers = ['coffeelint', 'coffee']
 
-" ctrlp - open tabs by default
+" ctrlp - open files in tabs
 let g:ctrlp_prompt_mappings = {
     \ 'AcceptSelection("e")': ['<c-t>'],
     \ 'AcceptSelection("t")': ['<cr>', '<2-LeftMouse>'],

@@ -199,11 +199,12 @@ alias sd='gitdiff'
 alias sdc="gitdiff --cached"
 alias sdw="gitdiff --color-words"
 alias sts='git status'
-alias gl='git log --name-status'  # git log with files changed
-alias bl='git log origin/master..HEAD'  # show commits that aren't in master
+alias gl='git log --name-status'          # git log with files changed
+alias gf='git diff --name-status origin/master...HEAD'  # list files changed against master
+alias bl='git log origin/master..HEAD'    # show commits that aren't in master
 alias gp='gitpush'
-alias gpuf='gitpull && git fetch'  # git pull and fetch
-alias gss='git stash show -p'  # show stash diff
+alias gpuf='gitpull && git fetch'         # git pull and fetch
+alias gss='git stash show -p'             # show stash diff
 
 # misc
 alias jk='jekyll serve --watch'
