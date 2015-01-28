@@ -8,7 +8,9 @@
 * Symlink .bashrc
 * Symlink .bashrc\_rvm (if using rvm)
 * Symlink .vimrc
+
 * Symlink .jshintrc (optional)
+* Symlink coffeelint.json (optional)
 
 * Install vundle: https://github.com/gmarik/Vundle.vim
 
