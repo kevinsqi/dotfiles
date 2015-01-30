@@ -19,6 +19,7 @@ Plugin 'skalnik/vim-vroom'         " run ruby tests
 Plugin 'scrooloose/syntastic'
 Plugin 'slim-template/vim-slim'    " haml syntax highlighting?
 Plugin 'kchmck/vim-coffee-script'
+Plugin 'toyamarinyon/vim-swift'
 
 " Plugin 'tpope/vim-endwise'       " add end tags in ruby
 
