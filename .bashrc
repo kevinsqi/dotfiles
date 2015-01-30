@@ -219,8 +219,7 @@ alias rtm='raketestonemethod'
 ########################
 
 # .bashrc.local
-if [ -f ~/.bashrc.local ]
-then
+if [ -f ~/.bashrc.local ]; then
   source ~/.bashrc.local
 fi
 
@@ -231,13 +230,18 @@ if [ -d ~/.nvm ]; then
 fi
 
 # PatientsLikeMe
-if [ -f ~/.bashrc_patientslikeme ]
-then
+if [ -f ~/.bashrc_patientslikeme ]; then
   source ~/.bashrc_patientslikeme
 fi
 
-# RVM (keep at bottom)
-if [ -f ~/.bashrc_rvm ]
-then
-  source ~/.bashrc_rvm
+# rbenv
+if [ -d ~/.rbenv ]; then
+  export PATH="$HOME/.rbenv/bin:$PATH"
+  eval "$(rbenv init -)"
+fi
+
+# rvm (keep at bottom)
+if [ -d ~/.rvm ]; then
+  [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell sessio
+  export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
 fi
