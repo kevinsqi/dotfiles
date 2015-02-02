@@ -172,6 +172,11 @@ function raketestonemethod {
   ruby -I"lib:test" $1 -n $2
 }
 
+# Find substring in file
+function findfilesubstr {
+  find . -name "*${@}*"
+}
+
 # exports
 export EDITOR='vim'
 export PAGER='less -S -R'
@@ -191,6 +196,7 @@ alias top='htop'
 alias op='xdg-open'
 alias xclip='xclip -selection c'  # Usage: `cat <filename> | xclip`
 alias fd='find . -name'
+alias fds='findfilesubstr'
 
 # git
 alias sg='git grep'  # TODO: make this also match on filenames?
