@@ -1,5 +1,6 @@
 # TODO not yet tested
 
+# TODO conditional on if .bashrc/.vimrc are files
 mv ~/.bashrc ~/.bashrc.bak.`date +%Y%m%d%H%M%S`
 mv ~/.vimrc ~/.vimrc.bak.`date +%Y%m%d%H%M%S`
 
