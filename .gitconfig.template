@@ -3,6 +3,7 @@
     email = iqnivek@gmail.com
 [core]
     editor = vim
+    excludesfile = '~/.gitignore_global'
 [color]
     status = auto
     diff = auto

@@ -9,6 +9,9 @@
 * Symlink .bashrc\_rvm (if using rvm)
 * Symlink .vimrc
 
+* Symlink .gitignore\_global
+* May need to run `git config --global core.excludesfile ~/.gitignore_global`?
+
 * Symlink .jshintrc (optional)
 * Symlink coffeelint.json (optional)
 
