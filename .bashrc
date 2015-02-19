@@ -152,8 +152,11 @@ function gitsearchlog {
   git log --all -S${@}
 }
 
-__git_files () {
-  _wanted files expl 'local files' _files
+function gitbranchmodifiedfiles {
+  git diff --name-status origin/master...HEAD
+}
+function vimbranchmodifiedfiles {
+  vim -p $(gitbranchmodifiedfiles | sed -E 's/^.\s+//')
 }
 
 # Copy file to clipboard
@@ -206,7 +209,9 @@ alias sdc="gitdiff --cached"
 alias sdw="gitdiff --color-words"
 alias sts='git status'
 alias gd='git diff origin/master...HEAD'  # show diff of branch against master
-alias gf='git diff --name-status origin/master...HEAD'  # list files changed against master
+alias gdw='gd -w'
+alias gf='gitbranchmodifiedfiles'         # list files changed against master
+alias vf='vimbranchmodifiedfiles'         # open files changed against master in vim
 alias gl='git log --name-status'          # git log with files changed
 alias bl='git log origin/master..HEAD'    # show commits that aren't in master
 alias gp='gitpush'
@@ -215,6 +220,7 @@ alias gss='git stash show -p'             # show stash diff
 
 # misc
 alias jk='jekyll serve --watch'
+alias nmr='sudo service network-manager restart'  # ugh
 
 # rails
 alias rt='raketestone'
