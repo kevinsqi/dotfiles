@@ -225,6 +225,7 @@ alias nmr='sudo service network-manager restart'  # ugh
 # rails
 alias rt='raketestone'
 alias rtm='raketestonemethod'
+alias rdb='rails dbconsole'
 
 
 ########################
