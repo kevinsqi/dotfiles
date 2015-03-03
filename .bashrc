@@ -217,6 +217,8 @@ alias bl='git log origin/master..HEAD'    # show commits that aren't in master
 alias gp='gitpush'
 alias gpuf='gitpull && git fetch'         # git pull and fetch
 alias gss='git stash show -p'             # show stash diff
+alias gundo='git revert --no-commit'
+alias gundolocal='git reset --soft HEAD^'
 
 # misc
 alias jk='jekyll serve --watch'
