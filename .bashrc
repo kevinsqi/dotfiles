@@ -115,9 +115,9 @@ function gitgrepvim {
   vim -p $(git grep -l "${@}") +/"${@}"
 }
 
-# open git modified files
+# open git modified files in vim
 function gitmod {
-  vim -p $(git status -s | grep "^ \?M\|^ \?A" | sed 's/^ \?. //')
+  vim -p $(git status -s | grep "^ \?M\|^ \?A\|^??" | sed 's/^...//')
 }
 
 # always pipe output to less
