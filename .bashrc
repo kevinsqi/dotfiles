@@ -208,6 +208,7 @@ alias sd='gitdiff'
 alias sdc="gitdiff --cached"
 alias sdw="gitdiff --color-words"
 alias sts='git status'
+alias gcf='git clean -f'                  # remove unversioned files
 alias gd='git diff origin/master...HEAD'  # show diff of branch against master
 alias gdw='gd -w'
 alias gf='gitbranchmodifiedfiles'         # list files changed against master
