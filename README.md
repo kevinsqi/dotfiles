@@ -8,6 +8,9 @@
 * Symlink .bashrc
 * Symlink .bashrc\_rvm (if using rvm)
 * Symlink .vimrc
+* Symlink .gitconfig
+
+* Set git email: `git config --global user.email <email>`
 
 * Symlink .gitignore\_global
 * May need to run `git config --global core.excludesfile ~/.gitignore_global`?
@@ -17,7 +20,6 @@
 
 * Install vundle: https://github.com/gmarik/Vundle.vim
 
-* Copy .gitconfig.template to ~/.gitconfig
 * Copy .ssh.config.template to ~/.ssh/config
 * Copy .bashrc.local.template to ~/.bashrc.local
 * Create ~/.pgpass and `chmod 600 ~/.pgpass`
