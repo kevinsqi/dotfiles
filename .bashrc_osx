@@ -1,0 +1,4 @@
+alias ls='ls -G'
+
+# Make sure to copy file to ~
+source ~/.git-completion.bash

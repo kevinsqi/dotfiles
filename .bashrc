@@ -236,8 +236,8 @@ alias rdb='rails dbconsole'
 ########################
 
 # Mac OSX git completion
-if [ -f ~/.git-completion.bash ]; then
-  source ~/.git-completion.bash
+if [ -f ~/.bashrc_osx ]; then
+  source ~/.bashrc_osx
 fi
 
 # .bashrc.local
