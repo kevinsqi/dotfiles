@@ -1,4 +1,5 @@
 alias ls='ls -G'
+alias op='open'
 
 # Make sure to copy file to ~
 source ~/.git-completion.bash
