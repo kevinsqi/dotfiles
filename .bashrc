@@ -226,6 +226,7 @@ alias jk='jekyll serve --watch'
 alias nmr='sudo service network-manager restart'  # ugh
 
 # rails
+alias rspub='rails server -b 0.0.0.0'
 alias rt='raketestone'
 alias rtm='raketestonemethod'
 alias rdb='rails dbconsole'
