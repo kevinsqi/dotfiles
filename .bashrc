@@ -236,6 +236,11 @@ alias rdb='rails dbconsole'
 # Sourcing other files #
 ########################
 
+# Mac OSX git completion
+if [ -f ~/.bashrc_osx ]; then
+  source ~/.bashrc_osx
+fi
+
 # .bashrc.local
 if [ -f ~/.bashrc.local ]; then
   source ~/.bashrc.local
