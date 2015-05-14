@@ -1,3 +1,6 @@
+" Dependencies:
+" sudo apt-get install silversearcher-ag
+
 " Install vundle: https://github.com/gmarik/Vundle.vim#quick-start
 " Then run :PluginInstall
 
