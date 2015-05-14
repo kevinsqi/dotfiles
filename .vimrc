@@ -1,4 +1,5 @@
 " Install vundle: https://github.com/gmarik/Vundle.vim#quick-start
+" Then run :PluginInstall
 
 " Vundle
 set nocompatible
@@ -12,6 +13,7 @@ Plugin 'gmarik/Vundle.vim'
 Plugin 'tpope/vim-rails'
 Plugin 'tpope/vim-fugitive'        " Gblame
 Plugin 'kien/ctrlp.vim'
+Plugin 'FelikZ/ctrlp-py-matcher'
 Plugin 'vim-scripts/matchit.zip'   " match xml tags with %
 Plugin 'pbrisbin/vim-mkdir'
 Plugin 'skalnik/vim-vroom'         " run ruby tests
@@ -34,6 +36,10 @@ let g:ctrlp_prompt_mappings = {
     \ 'AcceptSelection("e")': ['<c-t>'],
     \ 'AcceptSelection("t")': ['<cr>', '<2-LeftMouse>'],
     \ }
+
+" ctrlp - faster indexing with hg and pymatch
+let g:ctrlp_user_command = 'ag %s -i --nocolor --nogroup --hidden --ignore .git --ignore .svn --ignore .hg --ignore .DS_Store -g ""'
+let g:ctrlp_match_func = { 'match': 'pymatcher#PyMatch' }
 
 " set background=dark
 set ignorecase 
