@@ -213,7 +213,8 @@ alias gd='git diff origin/master...HEAD'  # show diff of branch against master
 alias gdw='gd -w'
 alias gf='gitbranchmodifiedfiles'         # list files changed against master
 alias vf='vimbranchmodifiedfiles'         # open files changed against master in vim
-alias gl='git log --name-status'          # git log with files changed
+alias gl="git log --no-merges --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --"  # morganatic git log
+alias glf="git log --no-merges --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --name-status --"  # show files changed
 alias bl='git log origin/master..HEAD'    # show commits that aren't in master
 alias gp='gitpush'
 alias gpuf='gitpull && git fetch'         # git pull and fetch
