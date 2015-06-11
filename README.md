@@ -6,7 +6,7 @@
 ## Installation
 
 * Symlink .bashrc
-* Symlink .bashrc\_osx and .git-completion.bash (if using OSX)
+* Symlink .bashrc\_osx and .git-completion.bash and .bash\_profile (if using OSX)
 * Symlink .vimrc
 * Symlink .gitconfig
 
