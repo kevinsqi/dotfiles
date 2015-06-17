@@ -26,6 +26,7 @@ Plugin 'scrooloose/syntastic'
 Plugin 'slim-template/vim-slim'    " haml syntax highlighting?
 Plugin 'kchmck/vim-coffee-script'
 Plugin 'toyamarinyon/vim-swift'
+Plugin 'mtscout6/vim-cjsx'
 
 " Plugin 'nathanaelkane/vim-indent-guides'  " zebra-stripe indentation
 " Plugin 'tpope/vim-endwise'       " add end tags in ruby
