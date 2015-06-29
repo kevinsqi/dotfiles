@@ -14,7 +14,7 @@ Git:
 
 * Set git email: `git config --global user.email <email>`
 * Symlink .gitignore\_global
-* May need to run `git config --global core.excludesfile ~/.gitignore_global`?
+* Run `git config --global core.excludesfile ~/.gitignore_global`
 
 Optional:
 
