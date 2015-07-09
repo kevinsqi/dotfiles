@@ -1,7 +1,16 @@
+# copy to ~/.ssh/config
+
 # Host <alias, e.g. "linode">
 #     HostName <ip_address, e.g. "0.0.0.0">
 #     User <username>
 
-# Prevent broken pipe errors
+# Allows doing `ssh forwardkevin` instead of `ssh -L 3000:localhost:3000 iqnivek@kevin.local`
+# Host forwardkevin
+#     User iqnivek
+#     HostName kevin.local
+#     LocalForward 3000 localhost:3000 
+
+# Keeps ssh connection alive by sending packet every 300 seconds
+# Prevents broken pipe errors
 Host *
     ServerAliveInterval 300
