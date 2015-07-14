@@ -28,6 +28,8 @@ Plugin 'kchmck/vim-coffee-script'
 Plugin 'toyamarinyon/vim-swift'
 Plugin 'mtscout6/vim-cjsx'
 
+Plugin 'ryanss/vim-hackernews'
+
 " Plugin 'nathanaelkane/vim-indent-guides'  " zebra-stripe indentation
 " Plugin 'tpope/vim-endwise'       " add end tags in ruby
 
