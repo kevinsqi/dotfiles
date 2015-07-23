@@ -145,7 +145,7 @@ function gitbranch {
 
 # search git history
 function gitsearch {
-  git grep ${@} $(git rev-list --all)
+  git rev-list --all | xargs git grep ${@}
 }
 function gitsearchlog {
   # http://stackoverflow.com/questions/4468361/search-all-of-git-history-for-string
