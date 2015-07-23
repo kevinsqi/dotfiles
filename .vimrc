@@ -27,6 +27,7 @@ Plugin 'slim-template/vim-slim'    " haml syntax highlighting?
 Plugin 'kchmck/vim-coffee-script'
 Plugin 'toyamarinyon/vim-swift'
 Plugin 'mtscout6/vim-cjsx'
+Plugin 'ngmy/vim-rubocop'
 
 Plugin 'ryanss/vim-hackernews'
 
