@@ -167,7 +167,7 @@ function clip {
 
 # Run one test file
 function raketestone {
-  rake test TEST=${@}
+  bundle exec rake test TEST=${@}
 }
 
 # Run one method from one test file
