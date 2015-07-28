@@ -231,6 +231,7 @@ alias rspub='rails server -b 0.0.0.0'
 alias rt='raketestone'
 alias rtm='raketestonemethod'
 alias rdb='rails dbconsole'
+alias rake='bundle exec rake'
 
 
 ########################

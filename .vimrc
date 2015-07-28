@@ -27,7 +27,7 @@ Plugin 'slim-template/vim-slim'    " haml syntax highlighting?
 Plugin 'kchmck/vim-coffee-script'
 Plugin 'toyamarinyon/vim-swift'
 Plugin 'mtscout6/vim-cjsx'
-Plugin 'ngmy/vim-rubocop'
+" Plugin 'ngmy/vim-rubocop'
 
 Plugin 'ryanss/vim-hackernews'
 
@@ -37,9 +37,8 @@ Plugin 'ryanss/vim-hackernews'
 call vundle#end()
 filetype plugin indent on
 
-let g:syntastic_ruby_checkers = ['mri', 'rubocop']
-" let g:syntastic_ruby_rubocop_exec = $HOME . "/rubocop.sh"
-let g:syntastic_ruby_rubocop_exec = '/home/iqnivek/.rbenv/shims/rubocop'
+" let g:syntastic_ruby_checkers = ['mri', 'rubocop']
+" let g:syntastic_ruby_rubocop_exec = '/home/iqnivek/.rbenv/shims/rubocop'
 let g:syntastic_coffee_checkers = ['coffeelint', 'coffee']
 
 " ctrlp - open files in tabs
