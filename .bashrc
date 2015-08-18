@@ -177,7 +177,7 @@ function raketestonemethod {
 
 # Find substring in file
 function findfilesubstr {
-  find . -name "*${@}*"
+  find . -iname "*${@}*"
 }
 
 # exports
@@ -198,7 +198,7 @@ alias lessf='less --follow-name -f'
 alias top='htop'
 alias op='xdg-open'
 alias xclip='xclip -selection c'  # Usage: `cat <filename> | xclip`
-alias fd='find . -name'
+alias fd='find . -iname'
 alias fds='findfilesubstr'
 
 # git
