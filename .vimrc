@@ -40,6 +40,8 @@ filetype plugin indent on
 " let g:syntastic_ruby_checkers = ['mri', 'rubocop']
 " let g:syntastic_ruby_rubocop_exec = '/home/iqnivek/.rbenv/shims/rubocop'
 let g:syntastic_coffee_checkers = ['coffeelint', 'coffee']
+let g:syntastic_javascript_checkers = ['jsxhint']
+let g:syntastic_javascript_jsxhint_exec = 'jsx-jshint-wrapper'
 
 " ctrlp - open files in tabs
 let g:ctrlp_prompt_mappings = {
