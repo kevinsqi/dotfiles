@@ -172,7 +172,7 @@ function raketestone {
 
 # Run one method from one test file
 function raketestonemethod {
-  ruby -I"lib:test" $1 -n $2
+  ruby -I"lib:test" $1 -n /.*$2.*/
 }
 
 # Find substring in file
