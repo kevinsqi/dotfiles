@@ -23,7 +23,9 @@ Optional:
 
 Vim:
 
+* Install ag (see vimrc for details)
 * Install vundle: https://github.com/gmarik/Vundle.vim
+* In vim: `PluginInstall`
 
 Other:
 
