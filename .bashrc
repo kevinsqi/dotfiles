@@ -152,6 +152,11 @@ function gitsearchlog {
   git log --all -S${@}
 }
 
+# set branch to track its remote
+function gitsetupstream {
+  git branch --set-upstream-to=origin/$(git rev-parse --abbrev-ref HEAD)
+}
+
 function gitbranchmodifiedfiles {
   git diff --name-status origin/master...HEAD
 }
