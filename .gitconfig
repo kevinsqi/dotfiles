@@ -1,6 +1,6 @@
 [user]
     name = Kevin Qi
-	email = kqi@patientslikeme.com
+	  email = iqnivek@gmail.com
 [core]
     editor = vim
     excludesfile = '~/.gitignore_global'
@@ -14,6 +14,6 @@
     ci = commit
     undo-commit = reset --soft HEAD^ 
 [push]
-    default = tracking
+    default = simple
 [branch]
     autosetupmerge = true
