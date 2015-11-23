@@ -112,7 +112,11 @@ fi
 
 # open files that match git grep, AND SET THE SEARCH QUERY
 function gitgrepvim {
-  vim -p $(git grep -l "${@}") +/"${@}"
+  # this works but effs up the terminal after quitting:
+  # git grep -lz "${@}" | xargs -0 vim -p +/"${@}" 
+
+  # sed command is to handle spaces in filenames
+  vim -p $(git grep -l "${@}" | sed -e 's/ /\ /') +/"${@}"
 }
 
 # open git modified files in vim
@@ -221,8 +225,7 @@ alias vf='vimbranchmodifiedfiles'         # open files changed against master in
 alias gl="git log --no-merges --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --"  # morganatic git log
 alias glf="git log --no-merges --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --name-status --"  # show files changed
 alias bl='git log origin/master..HEAD'    # show commits that aren't in master
-alias gp='gitpush'
-alias gpuf='gitpull && git fetch'         # git pull and fetch
+alias gp='git push'
 alias gss='git stash show -p'             # show stash diff
 alias gundo='git revert --no-commit'
 alias gundolocal='git reset --soft HEAD^'
