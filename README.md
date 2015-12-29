@@ -18,8 +18,9 @@ Git:
 
 Optional:
 
-* Symlink .jshintrc (optional)
-* Symlink coffeelint.json (optional)
+* Symlink .psqlrc
+* Symlink .eslintrc (or .jshintrc)
+* Symlink coffeelint.json
 
 Vim:
 

@@ -1,0 +1,9 @@
+\set QUIET 1
+
+-- format output
+\x auto
+
+-- show query execution timing
+\timing
+
+\unset QUIET
