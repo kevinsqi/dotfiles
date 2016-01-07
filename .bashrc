@@ -204,7 +204,6 @@ alias less='less -S'
 alias Less='less'
 alias diff='git diff --color --no-index'
 alias lessf='less --follow-name -f'
-alias top='htop'
 alias op='xdg-open'
 alias xclip='xclip -selection c'  # Usage: `cat <filename> | xclip`
 alias fd='find . -iname'
