@@ -16,9 +16,10 @@ shopt -s histappend
 HISTSIZE=5000
 HISTFILESIZE=10000
 
-# History: add commands to history immediately instead of after each session
+# History: add commands to history immediately instead of after each session (makes ctrl + r more useful)
 # https://www.digitalocean.com/community/tutorials/how-to-use-bash-history-commands-and-expansions-on-a-linux-vps
-export PROMPT_COMMAND="history -a; history -c; history -r; $PROMPT_COMMAND"
+#
+# export PROMPT_COMMAND="history -a; history -c; history -r; $PROMPT_COMMAND"
 
 # check the window size after each command and, if necessary,
 # update the values of LINES and COLUMNS.
