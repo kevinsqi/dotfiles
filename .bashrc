@@ -167,7 +167,12 @@ function gitsetupstream {
 }
 
 function gitbranchmodifiedfiles {
-  git diff --name-status origin/master...HEAD
+  if [ $# -ge 1 ]
+  then
+    git diff --name-status origin/${@}...HEAD
+  else
+    git diff --name-status origin/master...HEAD
+  fi
 }
 function vimbranchmodifiedfiles {
   vim -p $(gitbranchmodifiedfiles | sed -E 's/^.\s+//')
