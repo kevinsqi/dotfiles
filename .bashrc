@@ -194,6 +194,14 @@ function findfilesubstr {
   find . -iname "*${@}*"
 }
 
+# Add "&& notifywhendone" after a long running script to send OSX notification when complete, e.g.:
+#
+#     somelongrunningscript && notifywhendone
+#
+function notifywhendone {
+  osascript -e 'display notification "have a good one" with title "the thing is done"'
+}
+
 # exports
 export EDITOR='vim'
 export PAGER='less -S -R'
