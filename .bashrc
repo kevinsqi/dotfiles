@@ -251,6 +251,7 @@ alias gundolocal='git reset --soft HEAD^'
 alias jk='jekyll serve --watch'
 alias nmr='sudo service network-manager restart'  # ugh
 alias listfilesbylines='find . | xargs wc -l | gsort | less'
+alias listfilesbysize='du -sh * | gsort -h | less'
 
 # rails
 alias rspub='rails server -b 0.0.0.0'
