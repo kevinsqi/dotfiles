@@ -207,6 +207,11 @@ function notifywhendone {
   osascript -e 'display notification "have a good one" with title "the thing is done"'
 }
 
+# Get password for a given SSID
+function wifipassword {
+  security find-generic-password -D "AirPort network password" -a ${@} -g
+}
+
 # exports
 export EDITOR='vim'
 export PAGER='less -S -R'
