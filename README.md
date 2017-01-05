@@ -1,35 +1,35 @@
 ## TODO
 
+* Need to manually set core excludesfile? (git config --global core.excludesfile ~/.gitignore\_global)
+* Interactive prompt style, and use ruby/python
+* Add more to install.sh
 * Use thoughtbot's dotfile install approach? rcm + .dotfile.local overrides: https://github.com/thoughtbot/dotfiles
 * Take ideas from thoughtbot's vimrc, etc
 
 ## Installation
 
-* Symlink .bashrc
-* Symlink .bashrc\_osx and .git-completion.bash and .bash\_profile (if using OSX)
-* Symlink .vimrc
-* Symlink .gitconfig
+Prerequisites:
 
-Git:
+```
+brew install the_silver_searcher
+````
 
-* Set git email: `git config --global user.email <email>`
-* Symlink .gitignore\_global
-* Run `git config --global core.excludesfile ~/.gitignore_global`
+Symlink bashrc/vimrc and install vim plugins:
+
+```
+./install.sh
+```
+
+Configurable:
+
+* Copy .gitconfig and modify (e.g. email)
+Other:
+* Copy .ssh.config.template to ~/.ssh/config
+* Copy .bashrc.local.template to ~/.bashrc.local
 
 Optional:
 
+* Create ~/.pgpass and `chmod 600 ~/.pgpass`
 * Symlink .psqlrc
 * Symlink .eslintrc (or .jshintrc)
 * Symlink coffeelint.json
-
-Vim:
-
-* Install ag (see vimrc for details)
-* Install vundle: https://github.com/gmarik/Vundle.vim
-* In vim: `PluginInstall`
-
-Other:
-
-* Copy .ssh.config.template to ~/.ssh/config
-* Copy .bashrc.local.template to ~/.bashrc.local
-* Create ~/.pgpass and `chmod 600 ~/.pgpass`
