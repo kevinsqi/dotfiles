@@ -1,6 +1,6 @@
 " Dependencies:
-" sudo apt-get install silversearcher-ag
-" (OSX) brew install the_silver_searcher
+" [linux] sudo apt-get install silversearcher-ag
+" [OSX]   brew install the_silver_searcher
 
 " Install vundle: https://github.com/gmarik/Vundle.vim#quick-start
 " Then run :PluginInstall
