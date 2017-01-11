@@ -115,6 +115,8 @@ fi
 #  CUSTOMIZATIONS  #
 ####################
 
+MASTER_BRANCH="master"
+
 # open files that match git grep, AND SET THE SEARCH QUERY
 function gitgrepvim {
   # this works but effs up the terminal after quitting:
@@ -171,7 +173,7 @@ function gitbranchmodifiedfiles {
   then
     git diff --name-status origin/${@}...HEAD
   else
-    git diff --name-status origin/master...HEAD
+    git diff --name-status origin/$MASTER_BRANCH...HEAD
   fi
 }
 function vimbranchmodifiedfiles {
@@ -240,13 +242,13 @@ alias sdc="gitdiff --cached"
 alias sdw="gitdiff --color-words"
 alias sts='git status'
 alias gcf='git clean -f'                  # remove unversioned files
-alias gd='git diff origin/master...HEAD'  # show diff of branch against master
+alias gd='git diff origin/$MASTER_BRANCH...HEAD'  # show diff of branch against master
 alias gdw='gd -w'
 alias gf='gitbranchmodifiedfiles'         # list files changed against master
 alias vf='vimbranchmodifiedfiles'         # open files changed against master in vim
 alias gl="git log --no-merges --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --"  # morganatic git log
 alias glf="git log --no-merges --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --name-status --"  # show files changed
-alias bl='git log origin/master..HEAD'    # show commits that aren't in master
+alias bl='git log origin/$MASTER_BRANCH..HEAD'    # show commits that aren't in master
 alias gp='git push'
 alias gss='git stash show -p'             # show stash diff
 alias gundo='git revert --no-commit'
