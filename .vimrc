@@ -41,6 +41,8 @@ filetype plugin indent on
 " let g:syntastic_ruby_rubocop_exec = '/home/iqnivek/.rbenv/shims/rubocop'
 let g:syntastic_coffee_checkers = ['coffeelint', 'coffee']
 let g:syntastic_javascript_checkers = ['eslint']
+let g:syntastic_python_checkers = ['flake8']
+let g:syntastic_scss_checkers = ['scss_lint']
 
 " ctrlp - open files in tabs
 let g:ctrlp_prompt_mappings = {
