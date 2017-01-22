@@ -15,7 +15,8 @@ ln -s $DOTFILE_DIR/.gitignore_global ~/.gitignore_global
 ln -s $DOTFILE_DIR/.bashrc_osx ~/.bashrc_osx
 ln -s $DOTFILE_DIR/.git-completion.bash ~/.git-completion.bash
 
-# register global gitignore
+# git stuff
+cp $DOTFILE_DIR/.gitignore ~/.gitignore
 git config --global core.excludesfile ~/.gitignore_global
 
 # install vim plugins

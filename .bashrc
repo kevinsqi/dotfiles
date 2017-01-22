@@ -214,13 +214,17 @@ function wifipassword {
   security find-generic-password -D "AirPort network password" -a ${@} -g
 }
 
-# exports
+################
+#   Exports
+################
+
 export EDITOR='vim'
 export PAGER='less -S -R'
 export PATH=${PATH}:~/android-sdks/platform-tools:~/android-sdks/tools  # android development
+export PYTHONDONTWRITEBYTECODE=1  # disable creation of .pyc files (http://docs.python-guide.org/en/latest/writing/gotchas/)
 
 ################
-#   Aliases    #
+#   Aliases
 ################
 
 # general unix
