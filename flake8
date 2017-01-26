@@ -1,0 +1,7 @@
+# python linting configuration
+# add this to ~/.config/ directory
+
+[flake8]
+ignore =
+    # 80 char line length
+    E501
