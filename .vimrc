@@ -111,3 +111,17 @@ set wildmode=longest,list
 " Line numbers (:set nonu[mber] to remove for terminal copy/paste)
 set number
 highlight LineNr ctermfg=grey ctermbg=darkgrey
+
+" Find and use SCSS lint config if available in project
+" https://github.com/vim-syntastic/syntastic/issues/1373#issuecomment-161295716
+fun! SetScssConfig()
+    let scssConfig = findfile('.scss-lint.yml', '.;')
+    if scssConfig != ''
+        let b:syntastic_scss_scss_lint_args = '--config ' . scssConfig
+    endif
+endf
+
+" autocommands
+if !exists("autocommands_loaded")
+    autocmd FileType scss :call SetScssConfig()
+endif
