@@ -177,7 +177,7 @@ function gitbranchmodifiedfiles {
   fi
 }
 function vimbranchmodifiedfiles {
-  vim -p $(gitbranchmodifiedfiles | sed -E 's/^.\s+//')
+  vim -p $(gitbranchmodifiedfiles | sed 's/^.//')
 }
 
 # Copy file to clipboard
