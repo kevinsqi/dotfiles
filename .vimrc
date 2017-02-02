@@ -61,6 +61,23 @@ set title
 set scrolloff=3
 set ruler
 
+" Update file when it gets changed in filesystem
+" http://stackoverflow.com/a/10962191/341512
+set autoread
+augroup checktime
+    au!
+    if !has("gui_running")
+        "silent! necessary otherwise throws errors when using command
+        "line window.
+        autocmd BufEnter        * silent! checktime
+        autocmd CursorHold      * silent! checktime
+        autocmd CursorHoldI     * silent! checktime
+        "these two _may_ slow things down. Remove if they do.
+        autocmd CursorMoved     * silent! checktime
+        autocmd CursorMovedI    * silent! checktime
+    endif
+augroup END
+
 " Enable mouse
 " set mouse=a
 
