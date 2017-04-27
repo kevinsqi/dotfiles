@@ -50,9 +50,12 @@ let g:ctrlp_prompt_mappings = {
     \ 'AcceptSelection("t")': ['<cr>', '<2-LeftMouse>'],
     \ }
 
+" ctrlp - use .gitignore
+let g:ctrlp_user_command = ['.git/', 'git --git-dir=%s/.git ls-files -oc --exclude-standard']
+
 " ctrlp - faster indexing with hg and pymatch
-let g:ctrlp_user_command = 'ag %s -i --nocolor --nogroup --hidden --ignore .git --ignore .svn --ignore .hg --ignore .DS_Store -g ""'
 let g:ctrlp_match_func = { 'match': 'pymatcher#PyMatch' }
+" let g:ctrlp_user_command = 'ag %s -i --nocolor --nogroup --hidden --ignore .git --ignore .svn --ignore .hg --ignore .DS_Store -g ""'
 
 " set background=dark
 set ignorecase 
