@@ -239,7 +239,7 @@ alias fd='find . -iname'
 alias fds='findfilesubstr'
 
 # git
-alias sg='git grep'  # TODO: make this also match on filenames?
+alias sg='git grep -I'  # TODO: make this also match on filenames?
 alias vg='gitgrepvim'
 alias sd='gitdiff'
 alias sdc="gitdiff --cached"
