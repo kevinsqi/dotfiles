@@ -24,9 +24,9 @@ Plugin 'skalnik/vim-vroom'         " run ruby tests
 
 Plugin 'scrooloose/syntastic'
 Plugin 'slim-template/vim-slim'    " haml syntax highlighting?
-Plugin 'kchmck/vim-coffee-script'
 Plugin 'toyamarinyon/vim-swift'
-Plugin 'mtscout6/vim-cjsx'
+" Plugin 'kchmck/vim-coffee-script'  " coffeescript
+" Plugin 'mtscout6/vim-cjsx'         " coffeescript jsx
 " Plugin 'ngmy/vim-rubocop'
 
 Plugin 'ryanss/vim-hackernews'
