@@ -123,7 +123,7 @@ function gitgrepvim {
   # git grep -lz "${@}" | xargs -0 vim -p +/"${@}" 
 
   # sed command is to handle spaces in filenames
-  vim -p $(git grep -l "${@}" | sed -e 's/ /\ /') +/"${@}"
+  vim -p $(git grep -I -l "${@}" | sed -e 's/ /\ /') +/"${@}"
 }
 
 # open git modified files in vim
