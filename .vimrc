@@ -81,6 +81,9 @@ augroup checktime
     endif
 augroup END
 
+" Don't show 'existing swap file found' warning when opening a file in two vim instances
+set shortmess+=A
+
 " Enable mouse
 " set mouse=a
 
