@@ -215,6 +215,34 @@ function wifipassword {
 }
 
 ################
+#   Docker
+################
+
+# TODO: split into separate file?
+
+function docker-container-image() {
+    docker inspect $1 | jq -r '.[0].Image' | cut -d: -f2
+}
+
+function docker-nuke-container-image() {
+    for container in $(docker ps -a | grep $1 | awk 'NF>1{print $NF}'); do
+        docker-container-image ${container}
+    done | sort | uniq | xargs docker rmi -f
+}
+
+function docker-killall() {
+    docker kill $(docker ps -q)
+}
+
+function docker-rm-all() {
+    docker rm -f $(docker ps -a -q)
+}
+
+function docker-rmi-all() {
+    docker rmi -f $(docker images -q)
+}
+
+################
 #   Exports
 ################
 
