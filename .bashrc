@@ -320,11 +320,6 @@ if [ -d ~/.nvm ]; then
   source ~/.nvm/nvm.sh
 fi
 
-# PatientsLikeMe
-if [ -f ~/.bashrc_patientslikeme ]; then
-  source ~/.bashrc_patientslikeme
-fi
-
 # rbenv
 if [ -d ~/.rbenv ]; then
   export PATH="$HOME/.rbenv/bin:$PATH"
