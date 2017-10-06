@@ -214,6 +214,12 @@ function wifipassword {
   security find-generic-password -D "AirPort network password" -a ${@} -g
 }
 
+# batch rename files - TODO
+function batchrename {
+  # https://stackoverflow.com/questions/602706/batch-renaming-files-with-bash
+  # for i in *.pkg ; do mv "$i" "${i/-[0-9.]*.pkg/.pkg}" ; done
+}
+
 ################
 #   Docker
 ################
