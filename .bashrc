@@ -242,6 +242,10 @@ function docker-rmi-all() {
     docker rmi -f $(docker images -q)
 }
 
+function docker-cleanup-space() {
+    docker system prune -a
+}
+
 ################
 #   Exports
 ################
