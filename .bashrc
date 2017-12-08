@@ -136,22 +136,12 @@ function gitdiff {
   git diff --color "${@}" | less -RS
 }
 
-# push current branch
-function gitpush {
-  echo "Pushing to $(git rev-parse --abbrev-ref HEAD)..."
-  git push origin $(git rev-parse --abbrev-ref HEAD)
-}
-
-# pull current branch
-function gitpull {
-  echo "Pulling from $(git rev-parse --abbrev-ref HEAD)..."
-  git pull origin $(git rev-parse --abbrev-ref HEAD)
-}
-
 # checkout remote branch
-function gitbranch {
-  echo "Executing: git checkout -b ${@} origin/${@}..."
-  git checkout -b ${@} origin/${@}
+function gitnewbranch {
+  echo "Executing: git checkout -b ${@}"
+  git checkout -b ${@}
+  echo "Executing: git push -u origin ${@}"
+  git push -u origin ${@}
 }
 
 # search git history
@@ -295,6 +285,7 @@ alias gp='git push'
 alias gss='git stash show -p'             # show stash diff
 alias gundo='git revert --no-commit'
 alias gundolocal='git reset --soft HEAD^'
+alias gnb='gitnewbranch'
 
 # misc
 alias jk='jekyll serve --watch'
