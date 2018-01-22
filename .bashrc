@@ -315,6 +315,9 @@ if [ -f ~/.bashrc.local ]; then
   source ~/.bashrc.local
 fi
 
+# fzf
+[ -f ~/.fzf.bash ] && source ~/.fzf.bash
+
 # nvm (nodejs version manager)
 if [ -d ~/.nvm ]; then
   export NVM_DIR=~/.nvm
@@ -328,7 +331,7 @@ if [ -d ~/.rbenv ]; then
 fi
 
 # rvm (keep at bottom)
-if [ -d ~/.rvm ]; then
-  [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell sessio
-  export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
-fi
+# if [ -d ~/.rvm ]; then
+#  [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell sessio
+#   export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
+# fi
