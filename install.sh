@@ -24,3 +24,11 @@ if [ ! -d "~/.vim/bundle/Vundle.vim" ]; then
     git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
     vim +BundleInstall +qall
 fi
+
+# install homebrew packages
+brew install
+  fzf \
+  the_silver_searcher \
+  webp \
+  wget \
+  yarn \
