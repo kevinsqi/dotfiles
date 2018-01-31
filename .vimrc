@@ -22,9 +22,10 @@ Plugin 'vim-scripts/matchit.zip'   " match xml tags with %
 Plugin 'pbrisbin/vim-mkdir'
 Plugin 'skalnik/vim-vroom'         " run ruby tests
 
-Plugin 'scrooloose/syntastic'
-Plugin 'slim-template/vim-slim'    " haml syntax highlighting?
-Plugin 'toyamarinyon/vim-swift'
+Plugin 'w0rp/ale'                  " async syntax highlighting
+" Plugin 'scrooloose/syntastic'
+" Plugin 'slim-template/vim-slim'    " haml syntax highlighting?
+" Plugin 'toyamarinyon/vim-swift'
 " Plugin 'kchmck/vim-coffee-script'  " coffeescript
 " Plugin 'mtscout6/vim-cjsx'         " coffeescript jsx
 " Plugin 'ngmy/vim-rubocop'
@@ -39,7 +40,7 @@ filetype plugin indent on
 
 " let g:syntastic_ruby_checkers = ['mri', 'rubocop']
 " let g:syntastic_ruby_rubocop_exec = '/home/iqnivek/.rbenv/shims/rubocop'
-let g:syntastic_coffee_checkers = ['coffeelint', 'coffee']
+" let g:syntastic_coffee_checkers = ['coffeelint', 'coffee']
 let g:syntastic_javascript_checkers = ['eslint']
 let g:syntastic_python_checkers = ['flake8']
 let g:syntastic_scss_checkers = ['scss_lint']

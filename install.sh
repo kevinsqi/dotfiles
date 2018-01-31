@@ -19,6 +19,9 @@ ln -s $DOTFILE_DIR/.git-completion.bash ~/.git-completion.bash
 cp $DOTFILE_DIR/.gitignore ~/.gitignore
 git config --global core.excludesfile ~/.gitignore_global
 
+# upgrade vim to vim8
+brew install vim --with-override-system-vi
+
 # install vim plugins
 if [ ! -d "~/.vim/bundle/Vundle.vim" ]; then
     git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
