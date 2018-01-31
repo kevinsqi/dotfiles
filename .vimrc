@@ -22,6 +22,8 @@ Plugin 'vim-scripts/matchit.zip'   " match xml tags with %
 Plugin 'pbrisbin/vim-mkdir'
 Plugin 'skalnik/vim-vroom'         " run ruby tests
 
+" Plugin 'Valloric/YouCompleteMe'    " completion
+
 Plugin 'w0rp/ale'                  " async syntax highlighting
 " Plugin 'scrooloose/syntastic'
 " Plugin 'slim-template/vim-slim'    " haml syntax highlighting?
