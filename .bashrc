@@ -158,6 +158,16 @@ function gitsetupstream {
   git branch --set-upstream-to=origin/$(git rev-parse --abbrev-ref HEAD)
 }
 
+function gitcheckoutfork {
+  if [ $# -ge 3 ]
+  then
+    git fetch git@github.com:$1/$2.git $3:$1/$2
+  else
+    git fetch git@github.com:$1/$2.git master:$1/$2
+  fi
+  git checkout $1/$2
+}
+
 function gitbranchmodifiedfiles {
   if [ $# -ge 1 ]
   then
