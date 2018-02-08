@@ -276,6 +276,11 @@ alias xclip='xclip -selection c'  # Usage: `cat <filename> | xclip`
 alias fd='find . -iname'
 alias fds='findfilesubstr'
 
+# change directory upward
+alias cd1='cd ..'
+alias cd2='cd ../..'
+alias cd3='cd ../../../'
+
 # git
 alias sg='git grep -I'  # TODO: make this also match on filenames?
 alias vg='gitgrepvim'
