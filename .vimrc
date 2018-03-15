@@ -47,6 +47,8 @@ filetype plugin indent on
 let g:ale_linters = {
     \  'python': ['pylint'],
     \}
+" https://github.com/w0rp/ale/issues/208
+let g:ale_python_pylint_options = "--init-hook='import sys; sys.path.append(\".\")'"
 
 " ctrlp - open files in tabs
 let g:ctrlp_prompt_mappings = {

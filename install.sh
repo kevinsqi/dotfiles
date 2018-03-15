@@ -35,6 +35,7 @@ brew install
   webp \
   wget \
   yarn \
+  httpie \
 
 # fzf installation
 $(brew --prefix)/opt/fzf/install
