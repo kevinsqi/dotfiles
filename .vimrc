@@ -16,6 +16,7 @@ Plugin 'gmarik/Vundle.vim'
 
 Plugin 'tpope/vim-rails'
 Plugin 'tpope/vim-fugitive'        " Gblame
+Plugin 'tpope/vim-rhubarb'         " Gbrowse
 Plugin 'kien/ctrlp.vim'
 Plugin 'FelikZ/ctrlp-py-matcher'
 Plugin 'vim-scripts/matchit.zip'   " match xml tags with %
@@ -49,6 +50,10 @@ let g:ale_linters = {
     \}
 " https://github.com/w0rp/ale/issues/208
 let g:ale_python_pylint_options = "--init-hook='import sys; sys.path.append(\".\")'"
+
+let g:ale_fixers = {'javascript': ['prettier'], 'scss': ['prettier']}
+let g:ale_fix_on_save = 1
+let g:ale_javascript_prettier_use_local_config = 1
 
 " ctrlp - open files in tabs
 let g:ctrlp_prompt_mappings = {
