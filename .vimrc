@@ -14,6 +14,7 @@ call vundle#begin()
 
 Plugin 'gmarik/Vundle.vim'
 
+Plugin 'tpope/vim-commentary'      " comment/uncomment lines
 Plugin 'tpope/vim-rails'
 Plugin 'tpope/vim-fugitive'        " Gblame
 Plugin 'tpope/vim-rhubarb'         " Gbrowse
