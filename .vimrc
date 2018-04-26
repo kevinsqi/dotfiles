@@ -52,7 +52,11 @@ let g:ale_linters = {
 " https://github.com/w0rp/ale/issues/208
 let g:ale_python_pylint_options = "--init-hook='import sys; sys.path.append(\".\")'"
 
-let g:ale_fixers = {'javascript': ['prettier'], 'scss': ['prettier']}
+let g:ale_fixers = {
+    \ 'javascript': ['prettier'],
+    \ 'javascript.jsx': ['prettier'],
+    \ 'scss': ['prettier']
+\ }
 let g:ale_fix_on_save = 1
 let g:ale_javascript_prettier_use_local_config = 1
 
@@ -60,7 +64,7 @@ let g:ale_javascript_prettier_use_local_config = 1
 let g:ctrlp_prompt_mappings = {
     \ 'AcceptSelection("e")': ['<c-t>'],
     \ 'AcceptSelection("t")': ['<cr>', '<2-LeftMouse>'],
-    \ }
+\ }
 
 " ctrlp - use .gitignore
 let g:ctrlp_user_command = ['.git/', 'git --git-dir=%s/.git ls-files -oc --exclude-standard']
