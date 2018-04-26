@@ -1,18 +1,10 @@
 ## TODO
 
 * Need to manually set core excludesfile? (git config --global core.excludesfile ~/.gitignore\_global)
-* Interactive prompt style, and use ruby/python
-* Add more to install.sh
 * Use thoughtbot's dotfile install approach? rcm + .dotfile.local overrides: https://github.com/thoughtbot/dotfiles
 * Take ideas from thoughtbot's vimrc, etc
 
 ## Installation
-
-Prerequisites:
-
-```
-brew install the_silver_searcher
-````
 
 Symlink bashrc/vimrc and install vim plugins:
 
