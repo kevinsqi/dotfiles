@@ -280,6 +280,8 @@ alias fds='findfilesubstr'
 alias cd1='cd ..'
 alias cd2='cd ../..'
 alias cd3='cd ../../../'
+alias cd4='cd ../../../..'
+alias cd5='cd ../../../../..'
 
 # git
 alias sg='git grep -I'  # TODO: make this also match on filenames?
