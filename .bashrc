@@ -288,21 +288,22 @@ alias sg='git grep -I'  # TODO: make this also match on filenames?
 alias vg='gitgrepvim'
 alias sd='gitdiff'
 alias sdc="gitdiff --cached"
-alias sdw="gitdiff --color-words"
 alias sts='git status'
-alias gcf='git clean -f'                  # remove unversioned files
 alias gd='git diff origin/$MASTER_BRANCH...HEAD'  # show diff of branch against master
-alias gdw='gd -w'
 alias gf='gitbranchmodifiedfiles'         # list files changed against master
 alias vf='vimbranchmodifiedfiles'         # open files changed against master in vim
+alias vc='vim $(git diff --name-only --diff-filter=U)'  # open all files with conflicts
+alias gp='git push'
+alias gnb='gitnewbranch'
+
+# git (uncommon)
+alias gdw='gd -w'
 alias gl="git log --no-merges --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --"  # morganatic git log
 alias glf="git log --no-merges --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --name-status --"  # show files changed
 alias bl='git log origin/$MASTER_BRANCH..HEAD'    # show commits that aren't in master
-alias gp='git push'
 alias gss='git stash show -p'             # show stash diff
 alias gundo='git revert --no-commit'
 alias gundolocal='git reset --soft HEAD^'
-alias gnb='gitnewbranch'
 
 # misc
 alias jk='jekyll serve --watch'
