@@ -134,6 +134,7 @@ set showmode
 
 " Make 'ga' split the current tab and then navigate to tab under the cursor (depends on vim-rails 'gf' command)
 map ga :tab split<Enter>gf
+map gn :set nonumber<Enter>
 
 " Set backup directory
 " set swapfile
