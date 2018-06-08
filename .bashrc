@@ -292,9 +292,12 @@ alias sts='git status'
 alias gd='git diff origin/$MASTER_BRANCH...HEAD'  # show diff of branch against master
 alias gf='gitbranchmodifiedfiles'         # list files changed against master
 alias vf='vimbranchmodifiedfiles'         # open files changed against master in vim
-alias vc='vim $(git diff --name-only --diff-filter=U)'  # open all files with conflicts
 alias gp='git push'
 alias gnb='gitnewbranch'
+
+# git -- NEW (use more)
+alias gcam='git commit -am'
+alias vc='vim $(git diff --name-only --diff-filter=U)'  # open all files with conflicts
 
 # git (uncommon)
 alias gdw='gd -w'
