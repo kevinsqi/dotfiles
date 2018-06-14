@@ -73,6 +73,10 @@ let g:ctrlp_user_command = ['.git/', 'git --git-dir=%s/.git ls-files -oc --exclu
 let g:ctrlp_match_func = { 'match': 'pymatcher#PyMatch' }
 " let g:ctrlp_user_command = 'ag %s -i --nocolor --nogroup --hidden --ignore .git --ignore .svn --ignore .hg --ignore .DS_Store -g ""'
 
+" Disable broken SQL completion
+" https://stackoverflow.com/questions/24931088/disable-omnicomplete-or-ftplugin-or-something-in-vim?utm_medium=organic&utm_source=google_rich_qa&utm_campaign=google_rich_qa
+let g:omni_sql_no_default_maps = 1
+
 " set background=dark
 set ignorecase 
 set smartcase
