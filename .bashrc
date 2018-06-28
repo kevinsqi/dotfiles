@@ -309,8 +309,6 @@ alias gundo='git revert --no-commit'
 alias gundolocal='git reset --soft HEAD^'
 
 # misc
-alias jk='jekyll serve --watch'
-alias nmr='sudo service network-manager restart'  # ugh
 alias listfilesbylines='find . | xargs wc -l | gsort | less'
 alias listfilesbysize='du -sh * | gsort -h | less'
 

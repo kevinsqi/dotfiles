@@ -27,6 +27,7 @@ Plugin 'skalnik/vim-vroom'         " run ruby tests
 " Plugin 'Valloric/YouCompleteMe'    " completion
 
 Plugin 'w0rp/ale'                  " async syntax highlighting
+Plugin 'ambv/black'                " python formatter
 " Plugin 'scrooloose/syntastic'
 " Plugin 'slim-template/vim-slim'    " haml syntax highlighting?
 " Plugin 'toyamarinyon/vim-swift'
@@ -45,6 +46,8 @@ filetype plugin indent on
 " let g:syntastic_javascript_checkers = ['eslint']
 " let g:syntastic_python_checkers = ['flake8']
 " let g:syntastic_scss_checkers = ['scss_lint']
+
+let g:black_linelength = 99
 
 let g:ale_linters = {
     \  'python': ['pylint'],
