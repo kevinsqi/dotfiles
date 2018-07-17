@@ -41,20 +41,18 @@ Plugin 'ryanss/vim-hackernews'
 call vundle#end()
 filetype plugin indent on
 
-" let g:syntastic_ruby_checkers = ['mri', 'rubocop']
-" let g:syntastic_ruby_rubocop_exec = '/home/iqnivek/.rbenv/shims/rubocop'
-" let g:syntastic_javascript_checkers = ['eslint']
-" let g:syntastic_python_checkers = ['flake8']
-" let g:syntastic_scss_checkers = ['scss_lint']
-
+" Black configuration
 let g:black_linelength = 99
+autocmd BufWritePre *.py execute ':Black'
 
+"
+" ALE configuration
+"
 let g:ale_linters = {
     \  'python': ['pylint'],
     \}
 " https://github.com/w0rp/ale/issues/208
 let g:ale_python_pylint_options = "--init-hook='import sys; sys.path.append(\".\")'"
-
 let g:ale_fixers = {
     \ 'javascript': ['prettier'],
     \ 'javascript.jsx': ['prettier'],
