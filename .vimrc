@@ -22,21 +22,20 @@ Plugin 'kien/ctrlp.vim'
 Plugin 'FelikZ/ctrlp-py-matcher'
 Plugin 'vim-scripts/matchit.zip'   " match xml tags with %
 Plugin 'pbrisbin/vim-mkdir'
+Plugin 'ryanss/vim-hackernews'
 Plugin 'skalnik/vim-vroom'         " run ruby tests
-
-" Plugin 'Valloric/YouCompleteMe'    " completion
-
 Plugin 'w0rp/ale'                  " async syntax highlighting
 Plugin 'ambv/black'                " python formatter
+
+" No longer used:
+" Plugin 'Valloric/YouCompleteMe'    " completion
 " Plugin 'scrooloose/syntastic'
 " Plugin 'slim-template/vim-slim'    " haml syntax highlighting?
 " Plugin 'toyamarinyon/vim-swift'
 " Plugin 'ngmy/vim-rubocop'
-
-Plugin 'ryanss/vim-hackernews'
-
 " Plugin 'nathanaelkane/vim-indent-guides'  " zebra-stripe indentation
 " Plugin 'tpope/vim-endwise'       " add end tags in ruby
+
 
 call vundle#end()
 filetype plugin indent on
