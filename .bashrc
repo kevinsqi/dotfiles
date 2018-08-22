@@ -297,6 +297,8 @@ alias gp='git push'
 alias gnb='gitnewbranch'
 
 # git -- NEW (use more)
+alias gitprunebranches='git remote prune origin'
+alias gco='git checkout'
 alias gcam='git commit -am'
 alias vc='vim $(git diff --name-only --diff-filter=U)'  # open all files with conflicts
 
@@ -310,8 +312,8 @@ alias gundo='git revert --no-commit'
 alias gundolocal='git reset --soft HEAD^'
 
 # misc
-alias listfilesbylines='find . | xargs wc -l | gsort | less'
-alias listfilesbysize='du -sh * | gsort -h | less'
+# alias listfilesbylines='find . | xargs wc -l | gsort | less'
+# alias listfilesbysize='du -sh * | gsort -h | less'
 
 # rails
 alias rspub='rails server -b 0.0.0.0'
