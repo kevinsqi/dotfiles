@@ -158,14 +158,28 @@ function gitsetupstream {
   git branch --set-upstream-to=origin/$(git rev-parse --abbrev-ref HEAD)
 }
 
+# reference: https://github.com/iqnivek/library/wiki/Git
 function gitcheckoutfork {
-  if [ $# -ge 3 ]
+  if [ $# -eq 2 ]
   then
-    git fetch git@github.com:$1/$2.git $3:$1/$2
+    echo "Fetching $1..."
+    git fetch git@github.com:$1.git $2:$1
+    echo "git checkout $1"
+    git checkout $1
   else
-    git fetch git@github.com:$1/$2.git master:$1/$2
+    echo "Usage: gitcheckoutfork <user/repo> <branch>"
   fi
-  git checkout $1/$2
+}
+
+# reference: https://github.com/iqnivek/library/wiki/Git
+# NOTE: local branch name should match remote branch name (done through gitcheckoutfork)
+function gitpushtofork {
+  if [ $# -eq 2 ]
+  then
+    git push git@github.com:$1.git $2:$2
+  else
+    echo "Usage: gitpushtofork <user/repo> <branch>"
+  fi
 }
 
 function gitbranchmodifiedfiles {
