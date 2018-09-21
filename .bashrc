@@ -163,9 +163,9 @@ function gitcheckoutfork {
   if [ $# -eq 2 ]
   then
     echo "Fetching $1..."
-    git fetch git@github.com:$1.git $2:$1
+    git fetch git@github.com:$1.git $2:$2
     echo "git checkout $1"
-    git checkout $1
+    git checkout $2
   else
     echo "Usage: gitcheckoutfork <user/repo> <branch>"
   fi
