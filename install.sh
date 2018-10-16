@@ -22,6 +22,9 @@ git config --global core.excludesfile ~/.gitignore_global
 # upgrade vim to vim8
 brew install vim --with-override-system-vi
 
+# install black plugin with pip
+pip3 install black
+
 # install vim plugins
 if [ ! -d "~/.vim/bundle/Vundle.vim" ]; then
     git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
