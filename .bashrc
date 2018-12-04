@@ -181,7 +181,7 @@ function gitbranchmodifiedfiles {
     git diff --name-status origin/$MASTER_BRANCH...HEAD
   fi
 }
-function vimbranchmodifiedfiles {
+function vimgitbranchmodifiedfiles {
   vim -p $(gitbranchmodifiedfiles | sed 's/^.//')
 }
 
@@ -204,6 +204,10 @@ function raketestonemethod {
 # Find substring in file
 function findfilesubstr {
   find . -iname "*${@}*"
+}
+
+function vimfindfilesubstr {
+  vim -p $(findfilesubstr ${@})
 }
 
 # Add "&& notifywhendone" after a long running script to send OSX notification when complete, e.g.:
@@ -278,8 +282,8 @@ alias diff='git diff --color --no-index'
 alias lessf='less --follow-name -f'
 alias op='xdg-open'
 alias xclip='xclip -selection c'  # Usage: `cat <filename> | xclip`
-alias fd='find . -iname'
-alias fds='findfilesubstr'
+alias ff='findfilesubstr'
+alias vff='vimfindfilesubstr'
 
 # change directory upward
 alias cd1='cd ..'
@@ -290,14 +294,17 @@ alias cd5='cd ../../../../..'
 alias cd6='cd ../../../../../..'
 
 # git
-alias sg='git grep -I'  # TODO: make this also match on filenames?
-alias vg='gitgrepvim'
-alias sd='gitdiff'
-alias sdc="gitdiff --cached"
-alias sts='git status'
-alias gd='git diff origin/$MASTER_BRANCH...HEAD'  # show diff of branch against master
-alias gf='gitbranchmodifiedfiles'         # list files changed against master
-alias vf='vimbranchmodifiedfiles'         # open files changed against master in vim
+alias gg='git grep -I'  # TODO: make this also match on filenames?
+alias vgg='gitgrepvim'
+
+alias gd='gitdiff'
+alias gdc="gitdiff --cached"
+alias gdm='git diff origin/$MASTER_BRANCH...HEAD'  # show diff of branch against master
+
+alias gs='git status'
+alias gf='gitbranchmodifiedfiles'             # list files changed against master
+alias vgf='vimgitbranchmodifiedfiles'         # open files changed against master in vim
+
 alias gp='git push'
 alias gnb='gitnewbranch'
 
