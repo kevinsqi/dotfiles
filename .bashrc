@@ -206,6 +206,7 @@ function findfilesubstr {
   find . -iname "*${@}*"
 }
 
+# Open files from findfilesubstr in vim
 function vimfindfilesubstr {
   vim -p $(findfilesubstr ${@})
 }

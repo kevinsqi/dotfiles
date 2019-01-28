@@ -26,6 +26,7 @@ Plugin 'ryanss/vim-hackernews'
 Plugin 'skalnik/vim-vroom'         " run ruby tests
 Plugin 'w0rp/ale'                  " async syntax highlighting
 Plugin 'ambv/black'                " python formatter
+Plugin 'ianks/vim-tsx'             " tsx formatter
 
 " No longer used:
 " Plugin 'Valloric/YouCompleteMe'    " completion
@@ -49,12 +50,14 @@ autocmd BufWritePre *.py execute ':Black'
 "
 let g:ale_linters = {
     \  'python': ['pylint'],
-    \}
+\}
 " https://github.com/w0rp/ale/issues/208
 let g:ale_python_pylint_options = "--init-hook='import sys; sys.path.append(\".\")'"
 let g:ale_fixers = {
     \ 'javascript': ['prettier'],
     \ 'javascript.jsx': ['prettier'],
+    \ 'typescript': ['prettier'],
+    \ 'typescript.tsx': ['prettier'],
     \ 'scss': ['prettier']
 \ }
 let g:ale_fix_on_save = 1
