@@ -1,7 +1,10 @@
 {
-  "window.zoomLevel": 1,
+  "editor.formatOnSave": true,
+  "editor.minimap.enabled": true,
   "python.formatting.provider": "black",
   "python.formatting.blackArgs": ["--line-length", "99"],
-  "editor.formatOnSave": true,
-  "workbench.editor.enablePreview": false
+  "vim.hlsearch": true,
+  "window.zoomLevel": 1,
+  "workbench.editor.enablePreview": false,
+  "workbench.startupEditor": "newUntitledFile"
 }
