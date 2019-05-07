@@ -4,7 +4,14 @@
   "python.formatting.provider": "black",
   "python.formatting.blackArgs": ["--line-length", "99"],
   "vim.hlsearch": true,
+  "vim.normalModeKeyBindingsNonRecursive": [
+    {
+      "before": ["Z", "Z"],
+      "commands": [":wq"]
+    }
+  ],
   "window.zoomLevel": 1,
   "workbench.editor.enablePreview": false,
-  "workbench.startupEditor": "newUntitledFile"
+  "workbench.startupEditor": "newUntitledFile",
+  "workbench.colorTheme": "Solarized Light"
 }
