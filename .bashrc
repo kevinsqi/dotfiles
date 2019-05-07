@@ -167,7 +167,7 @@ function gitcheckoutfork {
 function gitpushtofork {
   if [ $# -eq 2 ]
   then
-    git push git@github.com:$1.git $2:$2
+    git push -f git@github.com:$1.git $2:$2
   else
     echo "Usage: gitpushtofork <user/repo> <branch>"
   fi
