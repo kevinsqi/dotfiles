@@ -10,6 +10,7 @@
       "commands": [":wq"]
     }
   ],
+  "window.title": "${activeEditorLong}${separator}${rootName}",
   "window.zoomLevel": 1,
   "workbench.editor.enablePreview": false,
   "workbench.startupEditor": "newUntitledFile",
