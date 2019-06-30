@@ -370,3 +370,8 @@ fi
 #  [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell sessio
 #   export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
 # fi
+
+# z.sh
+if [ -f ~/z.sh ]; then
+  . ~/z.sh
+fi
