@@ -201,14 +201,22 @@ function raketestonemethod {
   ruby -I"lib:test" $1 -n /.*$2.*/
 }
 
-# Find substring in file
-function findfilesubstr {
-  find . -iname "*${@}*"
+function vimfd {
+  vim -p $(fd ${@})
 }
 
+# DEPRECATED
+# Find substring in file
+function findfilesubstr {
+  echo "Use fd instead"
+  # find . -iname "*${@}*"
+}
+
+# DEPRECATED
 # Open files from findfilesubstr in vim
 function vimfindfilesubstr {
-  vim -p $(findfilesubstr ${@})
+  echo "Use vfd instead"
+  # vim -p $(findfilesubstr ${@})
 }
 
 # Add "&& notifywhendone" after a long running script to send OSX notification when complete, e.g.:
@@ -283,8 +291,10 @@ alias diff='git diff --color --no-index'
 alias lessf='less --follow-name -f'
 alias op='xdg-open'
 alias xclip='xclip -selection c'  # Usage: `cat <filename> | xclip`
-alias ff='findfilesubstr'  # TODO: switch to just use fd?
-alias vff='vimfindfilesubstr'
+
+alias vfd='vimfd'
+alias ff='findfilesubstr'  # Deprecated, use fd
+alias vff='vimfindfilesubstr'  # Deprecated, use vfd
 
 # change directory upward
 alias cd1='cd ..'
