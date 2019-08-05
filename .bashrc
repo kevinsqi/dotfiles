@@ -283,7 +283,7 @@ alias diff='git diff --color --no-index'
 alias lessf='less --follow-name -f'
 alias op='xdg-open'
 alias xclip='xclip -selection c'  # Usage: `cat <filename> | xclip`
-alias ff='findfilesubstr'
+alias ff='findfilesubstr'  # TODO: switch to just use fd?
 alias vff='vimfindfilesubstr'
 
 # change directory upward

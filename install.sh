@@ -36,6 +36,7 @@ fi
 
 # install homebrew packages
 brew install
+  fd \
   fzf \
   the_silver_searcher \
   webp \
