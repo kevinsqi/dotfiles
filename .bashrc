@@ -153,10 +153,11 @@ function gitsetupstream {
 function gitcheckoutfork {
   if [ $# -eq 2 ]
   then
+    LOCALBRANCHNAME=$1/$2
     echo "Fetching $1..."
-    git fetch git@github.com:$1.git $2:$2
+    git fetch git@github.com:$1.git $2:$LOCALBRANCHNAME
     echo "git checkout $1"
-    git checkout $2
+    git checkout $LOCALBRANCHNAME
   else
     echo "Usage: gitcheckoutfork <user/repo> <branch>"
   fi
@@ -167,7 +168,8 @@ function gitcheckoutfork {
 function gitpushtofork {
   if [ $# -eq 2 ]
   then
-    git push -f git@github.com:$1.git $2:$2
+    LOCALBRANCHNAME=$1/$2
+    git push -f git@github.com:$1.git $LOCALBRANCHNAME:$2
   else
     echo "Usage: gitpushtofork <user/repo> <branch>"
   fi
