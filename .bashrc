@@ -377,11 +377,12 @@ if [ -d ~/.rbenv ]; then
   eval "$(rbenv init -)"
 fi
 
-# rvm (keep at bottom)
-# if [ -d ~/.rvm ]; then
-#  [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell sessio
-#   export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
-# fi
+# pyenv
+if [ -d ~/.pyenv ]; then
+  export PYENV_ROOT="$HOME/.pyenv"
+  export PATH="$PYENV_ROOT/bin:$PATH"
+  eval "$(pyenv init -)"
+fi
 
 # z.sh
 if [ -f ~/z.sh ]; then
