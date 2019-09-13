@@ -322,6 +322,7 @@ alias gp='git push'
 alias gnb='gitnewbranch'
 
 # git -- NEW (use more)
+alias gpullr='git pull --rebase origin $MASTER_BRANCH'
 alias gitprunebranches='git remote prune origin'
 alias gco='git checkout'
 alias gcam='git commit -am'
