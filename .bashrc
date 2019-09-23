@@ -337,6 +337,9 @@ alias gss='git stash show -p'             # show stash diff
 alias gundo='git revert --no-commit'
 alias gundolocal='git reset --soft HEAD^'
 
+# z
+alias zcwd='z -c'  # Navigate to a match in the current working directory
+
 # misc
 # alias listfilesbylines='find . | xargs wc -l | gsort | less'
 # alias listfilesbysize='du -sh * | gsort -h | less'
