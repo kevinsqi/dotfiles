@@ -22,7 +22,7 @@ Plugin 'kien/ctrlp.vim'
 Plugin 'FelikZ/ctrlp-py-matcher'
 Plugin 'vim-scripts/matchit.zip'   " match xml tags with %
 Plugin 'pbrisbin/vim-mkdir'
-Plugin 'ryanss/vim-hackernews'
+" Plugin 'ryanss/vim-hackernews'
 Plugin 'skalnik/vim-vroom'         " run ruby tests
 Plugin 'w0rp/ale'                  " async syntax highlighting
 Plugin 'ambv/black'                " python formatter

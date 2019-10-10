@@ -35,7 +35,7 @@ if [ ! -d "~/.vim/bundle/Vundle.vim" ]; then
 fi
 
 # install homebrew packages
-brew install
+brew install \
   fd \
   fzf \
   the_silver_searcher \
