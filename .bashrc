@@ -240,6 +240,11 @@ function wifipassword {
   # for i in *.pkg ; do mv "$i" "${i/-[0-9.]*.pkg/.pkg}" ; done
 # }
 
+function cleanupspace {
+  yarn cache clean
+  docker system prune
+}
+
 ################
 #   Docker
 ################
@@ -271,6 +276,7 @@ function docker-rmi-all() {
 function docker-cleanup-space() {
     docker system prune -a
 }
+
 
 ################
 #   Exports
