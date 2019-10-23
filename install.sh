@@ -46,3 +46,8 @@ brew install \
 
 # fzf installation
 $(brew --prefix)/opt/fzf/install
+
+# optional, long homebrew packages
+brew install postgresql
+brew install awscli
+brew install terraform
