@@ -27,6 +27,8 @@ Plugin 'skalnik/vim-vroom'         " run ruby tests
 Plugin 'w0rp/ale'                  " async syntax highlighting
 Plugin 'ambv/black'                " python formatter
 Plugin 'ianks/vim-tsx'             " tsx formatter
+Plugin 'hashivim/vim-terraform'    " terraform highlighting
+
 
 " No longer used:
 " Plugin 'Valloric/YouCompleteMe'    " completion
