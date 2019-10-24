@@ -245,6 +245,11 @@ function cleanupspace {
   docker system prune
 }
 
+# Get trello_backup_config.json from 1pass
+function trellobackup {
+  trello-backup ~/trello_backup_config.json
+}
+
 ################
 #   Docker
 ################
