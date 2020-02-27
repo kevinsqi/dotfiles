@@ -110,7 +110,7 @@ $(brew --prefix)/opt/fzf/install
 
 # Specify preferences config directory
 # (assumes presence of ~/dotfiles symlink)
-defaults write com.googlecode.iterm2.plist PrefsCustomFolder -string "~/dotfiles/iterm2"
+defaults write com.googlecode.iterm2.plist PrefsCustomFolder -string "~/dotfiles/iterm2_profile"
 
 # Use config from directory
 defaults write com.googlecode.iterm2.plist LoadPrefsFromCustomFolder -bool true
