@@ -44,6 +44,9 @@ defaults write NSGlobalDomain InitialKeyRepeat -int 35
 # Dock - minimize with scale effect
 defaults write com.apple.dock mineffect -string scale && killall Dock
 
+# Enable key repeat by holding down key (e.g. vscode)
+defaults write NSGlobalDomain ApplePressAndHoldEnabled -bool false
+
 
 #
 # git
