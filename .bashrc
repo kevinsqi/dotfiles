@@ -108,7 +108,7 @@ fi
 
 MASTER_BRANCH="master"
 
-# open files that match git grep, AND SET THE SEARCH QUERY
+# open files that match git grep in vim, AND SET THE SEARCH QUERY
 function gitgrepvim {
   # this works but effs up the terminal after quitting:
   # git grep -lz "${@}" | xargs -0 vim -p +/"${@}" 
@@ -117,9 +117,19 @@ function gitgrepvim {
   vim -p $(git grep -I -l "${@}" | sed -e 's/ /\ /') +/"${@}"
 }
 
+# open files that match git grep in vscode
+function gitgrepcode {
+  code -n $(git grep -I -l "${@}" | sed -e 's/ /\ /')
+}
+
 # open git modified files in vim
 function gitmod {
   vim -p $(git status -s | grep "^ \?M\|^ \?A\|^??" | sed 's/^...//')
+}
+
+# open git modified files in vscode
+function gitmodcode {
+  code -n $(git status -s | grep "^ \?M\|^ \?A\|^??" | sed 's/^...//')
 }
 
 # always pipe output to less
@@ -320,6 +330,7 @@ alias cd6='cd ../../../../../..'
 # git
 alias gg='git grep -I'  # TODO: make this also match on filenames?
 alias vgg='gitgrepvim'
+alias cgg='gitgrepcode'
 
 alias gd='gitdiff'
 alias gdc="gitdiff --cached"
