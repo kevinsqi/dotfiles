@@ -28,6 +28,11 @@
 	<false/>
 	<key>NSScrollViewShouldScrollUnderTitlebar</key>
 	<false/>
+	<key>NSSplitView Subview Frames NSColorPanelSplitView</key>
+	<array>
+		<string>0.000000, 0.000000, 224.000000, 258.000000, NO, NO</string>
+		<string>0.000000, 259.000000, 224.000000, 48.000000, NO, NO</string>
+	</array>
 	<key>NSTableView Columns v2 KeyBingingTable</key>
 	<data>
 	YnBsaXN0MDDUAQIDBAUGBwpYJHZlcnNpb25ZJGFyY2hpdmVyVCR0b3BYJG9iamVjdHMS
@@ -51,12 +56,23 @@
 	</data>
 	<key>NSTableView Supports v2 KeyBingingTable</key>
 	<true/>
+	<key>NSToolbar Configuration com.apple.NSColorPanel</key>
+	<dict>
+		<key>TB Is Shown</key>
+		<integer>1</integer>
+	</dict>
+	<key>NSWindow Frame NSColorPanel</key>
+	<string>0 167 224 275 0 0 1792 1097 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>896 638 570 452 0 0 1792 1097 </string>
+	<string>960 23 953 1034 0 0 1920 1057 </string>
 	<key>NSWindow Frame iTerm Window 1</key>
-	<string>228 115 570 452 0 0 1792 1097 </string>
+	<string>3072 -297 1273 1394 1792 -320 2560 1417 </string>
 	<key>NSWindow Frame iTerm Window 2</key>
-	<string>249 92 570 452 0 0 1792 1097 </string>
+	<string>218 23 953 1034 0 0 1920 1057 </string>
+	<key>NeverWarnAboutShortLivedSessions_85CA7AE1-E947-481D-88F6-F4A26894B18C</key>
+	<true/>
+	<key>NeverWarnAboutShortLivedSessions_85CA7AE1-E947-481D-88F6-F4A26894B18C_selection</key>
+	<integer>0</integer>
 	<key>New Bookmarks</key>
 	<array>
 		<dict>
@@ -637,7 +653,7 @@
 			<key>Screen</key>
 			<integer>-1</integer>
 			<key>Scrollback Lines</key>
-			<integer>1000</integer>
+			<integer>0</integer>
 			<key>Selected Text Color</key>
 			<dict>
 				<key>Blue Component</key>
@@ -1440,7 +1456,7 @@
 	<key>SUHasLaunchedBefore</key>
 	<true/>
 	<key>SULastCheckTime</key>
-	<date>2020-02-27T06:44:37Z</date>
+	<date>2020-03-03T17:48:35Z</date>
 	<key>SUSendProfileInfo</key>
 	<false/>
 	<key>SoundForEsc</key>
