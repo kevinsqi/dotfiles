@@ -14,5 +14,9 @@
   "window.zoomLevel": 1,
   "workbench.editor.enablePreview": false,
   "workbench.startupEditor": "newUntitledFile",
-  "workbench.colorTheme": "GitHub Plus"
+  "workbench.colorTheme": "GitHub Plus",
+  "gitlens.hovers.currentLine.over": "line",
+  "gitlens.hovers.enabled": false,
+  "gitlens.statusBar.enabled": false,
+  "gitlens.codeLens.enabled": false
 }
