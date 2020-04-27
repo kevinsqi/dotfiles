@@ -334,6 +334,7 @@ alias cgg='gitgrepcode'
 
 alias gd='gitdiff'
 alias gdc="gitdiff --cached"
+alias gdi="git diff --no-index"  # diff files that aren't in git
 alias gdm='git diff origin/$MASTER_BRANCH...HEAD'  # show diff of branch against master
 
 alias gs='git status'
@@ -344,6 +345,7 @@ alias gp='git push'
 alias gnb='gitnewbranch'
 
 # git -- NEW (use more)
+alias gl="git log origin/master..HEAD --no-merges --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --name-status --"  # show commits from master and files changed in each
 alias gpullr='git pull --rebase origin $MASTER_BRANCH'
 alias gitprunebranches='git remote prune origin'
 alias gco='git checkout'
@@ -352,9 +354,6 @@ alias vc='vim $(git diff --name-only --diff-filter=U)'  # open all files with co
 
 # git (uncommon)
 alias gdw='gd -w'
-alias gl="git log --no-merges --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --"  # morganatic git log
-alias glf="git log --no-merges --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --name-status --"  # show files changed
-alias bl='git log origin/$MASTER_BRANCH..HEAD'    # show commits that aren't in master
 alias gss='git stash show -p'             # show stash diff
 alias gundo='git revert --no-commit'
 alias gundolocal='git reset --soft HEAD^'
@@ -414,3 +413,4 @@ fi
 if [ -f ~/z.sh ]; then
   . ~/z.sh
 fi
+eval "$(direnv hook bash)"
