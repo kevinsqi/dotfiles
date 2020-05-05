@@ -345,6 +345,7 @@ alias gp='git push'
 alias gnb='gitnewbranch'
 
 # git -- NEW (use more)
+alias gamend="git add . && git commit --amend --no-edit"
 alias gl="git log origin/master..HEAD --no-merges --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --name-status --"  # show commits from master and files changed in each
 alias gpullr='git pull --rebase origin $MASTER_BRANCH'
 alias gitprunebranches='git remote prune origin'
