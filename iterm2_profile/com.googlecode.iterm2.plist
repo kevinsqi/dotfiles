@@ -64,11 +64,11 @@
 	<key>NSWindow Frame NSColorPanel</key>
 	<string>0 167 224 275 0 0 1792 1097 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>1792 -165 1273 1262 1792 -320 2560 1417 </string>
+	<string>258 0 1275 1097 0 0 1792 1097 </string>
 	<key>NSWindow Frame iTerm Window 1</key>
-	<string>3072 -297 1273 1394 1792 -320 2560 1417 </string>
+	<string>3072 -320 1275 1417 1792 -320 2560 1417 </string>
 	<key>NSWindow Frame iTerm Window 2</key>
-	<string>2539 -320 1273 1417 1792 -320 2560 1417 </string>
+	<string>3072 -297 1275 1394 1792 -320 2560 1417 </string>
 	<key>NeverWarnAboutShortLivedSessions_85CA7AE1-E947-481D-88F6-F4A26894B18C</key>
 	<true/>
 	<key>NeverWarnAboutShortLivedSessions_85CA7AE1-E947-481D-88F6-F4A26894B18C_selection</key>
@@ -649,7 +649,7 @@
 			<key>Non-ASCII Anti Aliased</key>
 			<true/>
 			<key>Normal Font</key>
-			<string>Monaco 14</string>
+			<string>Monaco 16</string>
 			<key>Option Key Sends</key>
 			<integer>0</integer>
 			<key>Prompt Before Closing 2</key>
@@ -725,7 +725,7 @@
 		<key>screenFrame</key>
 		<string>{{1792, -320}, {2560, 1440}}</string>
 		<key>topLeft</key>
-		<string>{2270, 433}</string>
+		<string>{1932, 269}</string>
 	</dict>
 	<key>NoSyncInstallationId</key>
 	<string>AFE40D84-B3F0-40D0-BCB6-CFF6C9E65E6C</string>
@@ -1501,7 +1501,7 @@
 	<key>SUHasLaunchedBefore</key>
 	<true/>
 	<key>SULastCheckTime</key>
-	<date>2020-03-10T17:45:23Z</date>
+	<date>2020-04-30T17:26:35Z</date>
 	<key>SUSendProfileInfo</key>
 	<false/>
 	<key>SoundForEsc</key>
