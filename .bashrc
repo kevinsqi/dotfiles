@@ -256,7 +256,7 @@ function cleanupspace {
 }
 
 # Get trello_backup_config.json from 1pass
-function trellobackup {
+function trellobackuphelper {
   trello-backup ~/trello_backup_config.json
 }
 
