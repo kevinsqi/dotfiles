@@ -25,7 +25,7 @@ Plugin 'pbrisbin/vim-mkdir'
 " Plugin 'ryanss/vim-hackernews'
 Plugin 'skalnik/vim-vroom'         " run ruby tests
 Plugin 'w0rp/ale'                  " async syntax highlighting
-Plugin 'ambv/black'                " python formatter
+" Plugin 'ambv/black'                " python formatter
 Plugin 'ianks/vim-tsx'             " tsx formatter
 Plugin 'hashivim/vim-terraform'    " terraform highlighting
 
@@ -44,8 +44,8 @@ call vundle#end()
 filetype plugin indent on
 
 " Black configuration
-let g:black_linelength = 99
-autocmd BufWritePre *.py execute ':Black'
+" let g:black_linelength = 99
+" autocmd BufWritePre *.py execute ':Black'
 
 "
 " ALE configuration
