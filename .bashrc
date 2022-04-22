@@ -415,4 +415,3 @@ fi
 if [ -f ~/z.sh ]; then
   . ~/z.sh
 fi
-eval "$(direnv hook bash)"
