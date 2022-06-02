@@ -75,6 +75,9 @@ fi
 # install black plugin with pip
 # pip3 install black
 
+# TODO: handle linux
+# fd - https://github.com/sharkdp/fd#installation
+
 #
 # homebrew packages
 #
