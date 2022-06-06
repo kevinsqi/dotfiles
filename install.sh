@@ -26,6 +26,9 @@ ln -s $DOTFILE_DIR/z.sh ~/z.sh
 ln -s $DOTFILE_DIR/.bashrc_osx ~/.bashrc_osx
 ln -s $DOTFILE_DIR/.git-completion.bash ~/.git-completion.bash
 
+# Turn off mouse acceleration
+defaults write .GlobalPreferences com.apple.mouse.scaling -1
+
 # Trackpad scrolling direction
 defaults write NSGlobalDomain com.apple.swipescrolldirection -bool false
 
